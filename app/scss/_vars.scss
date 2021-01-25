@@ -1,4 +1,5 @@
 $btn: #a3bbc8;
+$title: #191919;
 
 %dnsans-400 {
   font-family: 'DMSans-Regular', sans-serif;
@@ -24,3 +25,40 @@ $btn: #a3bbc8;
   font-family: 'Poppins-Bold', sans-serif;
   font-weight: 700;
 }
+
+%btn-arrow {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 12px;
+  color: #fff;
+  background-color: $btn;
+  padding: 25px 100px 25px 25px;
+  position: relative;
+  &::after {
+    content: '';
+    background-image: url(../images/icons/arrow-right.svg);
+    width: 22px;
+    height: 9px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+  }
+}
+%section-title {
+  @extend %dnsans-700;
+  font-size: 36px;
+  line-height: 44px;
+  color: $title;
+}
+%flt {
+  @extend %dnsans-700;
+  font-size: 16px;
+  line-height: 20;
+  color: #8b8b8b;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  margin: 30px 15px 80px;
+}
+
+
