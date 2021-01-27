@@ -212,17 +212,6 @@
   }
   &__item-img {
     padding-right: 24px;
-    position: relative;
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: #dfe3e2;
-    }
   }
   &__item-content {
     max-width: 213px;
@@ -243,6 +232,191 @@
 ul.services__list {
   padding: 48px 0 40px;
 }
+.popular {
+  text-align: center;
+  &__title {
+    @extend %section-title;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px 30px;
+    background-color: #f9f9f9;
+  }
+  &__item {
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    padding: 30px 15px 28px 15px;
+    position: relative;
+    &:hover .item-links {
+    opacity: 1;
+    }
+  }
+  &__item-img {
+    margin: 0 auto;
+  }
+  &__item-title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 80px;
+  }
+  &__item-price {
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 700;
+    color: $btn;
+  }
+}
+.product-filters__btn {
+  @extend %flt;
+}
+
+.item-links {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  opacity: 0;
+  transition: all .4s;
+}
+.item-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  transition: all .4s;
+  &:hover {
+    path {
+      fill: #fff;
+    }
+    background-color: #a3bac7;
+    transform: scale(1.05);
+  }
+}
+.item-link svg path {
+  transition: .4s;
+}
+.item-link + .item-link {
+  margin-left: 15px;
+}
+.lamps {
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding: 185px 0 105px;
+  }
+  &__item {
+    height: 390px;
+    background-color: #feefe2;
+    padding: 90px 5px 85px 50%;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 140px;
+      bottom: 85px;
+    }
+    &:first-child::before {
+      width: 233px;
+      height: 405px;
+      background-image: url(../images/lamps/lamp-1.png);
+    }
+    &:last-child::before {
+      width: 222px;
+      height: 399px;
+      background-image: url(../images/lamps/lamp-2.png);
+    }
+  }
+  &__item-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    max-width: 332px;
+  }
+  &__inner-title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  &__inner-desc {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 15px;
+  }
+  &__inner-link {
+    @extend %btn-arrow;
+    color: #436372;
+    background-color: transparent;
+    border: 1px solid #b3b7b5;
+    border-radius: 5px;
+    padding: 24px 85px 24px 20px;
+    margin-top: auto;
+    &::after {
+      background-image: url(../images/icons/lamps__arrow-right.svg);
+    }
+    &:hover {
+      background-color: rgba($btn, .1);
+    }
+  }
+}
+.new-design {
+  &__title {
+    @extend %section-title;
+    text-align: center;
+  }
+  & .product-filters {
+    text-align: center;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px 30px;
+  }
+  &__item {
+    max-width: 370px;
+    height: 245px;
+    background-size: cover;
+    background-position: bottom right;
+    padding: 40px 0 0 40px;
+    position: relative;
+    &:hover .item-links {
+      opacity: 1;
+    }
+  }
+  &__item-title {
+    max-width: 175px;
+    font-size: 20px;
+    line-height: 24px;
+    color: $title;
+    margin-bottom: 16px;
+  }
+  &__item-coll {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: $btn;
+  }
+  & .item-links {
+    bottom: 30px;
+  }
+}
+
+
+
+
 
 
 

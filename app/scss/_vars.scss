@@ -28,12 +28,15 @@ $title: #191919;
 
 %btn-arrow {
   display: inline-block;
+  width: fit-content;
+  @extend %rubik-500;
   font-size: 15px;
   line-height: 12px;
   color: #fff;
   background-color: $btn;
   padding: 25px 100px 25px 25px;
   position: relative;
+  transition: all .4s;
   &::after {
     content: '';
     background-image: url(../images/icons/arrow-right.svg);
@@ -50,15 +53,16 @@ $title: #191919;
   font-size: 36px;
   line-height: 44px;
   color: $title;
+  padding-top: 100px;
 }
 %flt {
   @extend %dnsans-700;
   font-size: 16px;
-  line-height: 20;
+  line-height: 20px;
   color: #8b8b8b;
-  margin-top: 30px;
-  margin-bottom: 80px;
+  background-color: transparent;
   margin: 30px 15px 80px;
+  cursor: pointer;
 }
 
 

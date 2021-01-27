@@ -10,4 +10,22 @@ $(function() {
       fade: true,    
    });
 
+
+   // $('#MixItUp1').mixItUp({
+   //    selectors: {
+   //      filter: '.popular__filt-btn',
+   //      sort: '.sort-1'
+   //    }
+   //  });
+    
+   //  $('#MixItUp2').mixItUp({
+   //    selectors: {
+   //      filter: '.new-design__filt-btn',
+   //      sort: '.sort-2'
+   //    }
+   //  });
+
+   var mixer1 = mixitup('.popular__items');
+   var mixer2 = mixitup('.new-design__items');
+
 });

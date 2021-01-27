@@ -50,5 +50,8 @@ a {
 }
 input,
 button {
+   background-color: transparent;
    border: none;
+   padding: 0;
+   outline-color: rgba(#191919, .35);
 }
