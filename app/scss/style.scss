@@ -31,7 +31,7 @@
     white-space: nowrap;
     padding: 0 2px 2px 1px;
     border-bottom: 1px solid transparent;
-    transition: all .4s;
+    transition: all .3s;
     &:hover {
       border-bottom: 1px solid #436372;
     }
@@ -50,6 +50,7 @@
     }
   }
   &__input {
+    width: 210px;
     font-size: 15px;
     padding: 1px 5px;
     border: 2px solid #edf1f4;
@@ -284,7 +285,7 @@ ul.services__list {
   right: 0;
   bottom: 100px;
   opacity: 0;
-  transition: all .4s;
+  transition: all .3s;
 }
 .item-link {
   display: flex;
@@ -295,7 +296,7 @@ ul.services__list {
   background-color: #fff;
   border-radius: 50%;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-  transition: all .4s;
+  transition: all .3s;
   &:hover {
     path {
       fill: #fff;
@@ -318,26 +319,16 @@ ul.services__list {
     padding: 185px 0 105px;
   }
   &__item {
+    display: flex;
     height: 390px;
     background-color: #feefe2;
-    padding: 90px 5px 85px 50%;
+    padding: 90px 5px 85px 55%;
     position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      left: 140px;
-      bottom: 85px;
-    }
-    &:first-child::before {
-      width: 233px;
-      height: 405px;
-      background-image: url(../images/lamps/lamp-1.png);
-    }
-    &:last-child::before {
-      width: 222px;
-      height: 399px;
-      background-image: url(../images/lamps/lamp-2.png);
-    }
+  }
+  &__item-img {
+    position: absolute;
+    left: 16%;
+    bottom: 85px;
   }
   &__item-inner {
     display: flex;
@@ -497,6 +488,9 @@ ul.services__list {
   &__menu-item:not(:last-child) {
     border-right: 1px solid #7b7b7b;
   }
+}
+.video {
+  height: 50vh;
 }
 
 

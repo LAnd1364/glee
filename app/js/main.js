@@ -11,21 +11,39 @@ $(function() {
    });
 
 
-   // $('#MixItUp1').mixItUp({
+   // $('.popular__items').mixItUp({
    //    selectors: {
    //      filter: '.popular__filt-btn',
-   //      sort: '.sort-1'
    //    }
    //  });
     
-   //  $('#MixItUp2').mixItUp({
+   //  $('.new-design__items').mixItUp({
    //    selectors: {
    //      filter: '.new-design__filt-btn',
-   //      sort: '.sort-2'
    //    }
    //  });
 
-   var mixer1 = mixitup('.popular__items');
-   var mixer2 = mixitup('.new-design__items');
+   // var mixer1 = mixitup('.popular__items');
+   // var mixer2 = mixitup('.new-design__items');
+
+
+   
+   
+// var containerEl1 = document.querySelector('.popular__items');
+// var containerEl2 = document.querySelector('.new-design__items');
+
+var containerEl1 = document.querySelector('#MixItUp1');
+var containerEl2 = document.querySelector('#MixItUp2');
+
+var mixer1 = mixitup(containerEl1, {
+   selectors: {
+      elementFilter: 'popular__filt-btn'
+   }
+});
+var mixer2 = mixitup(containerEl2, {
+   selectors: {
+      elementFilter: 'new-design__filt-btn'
+   }
+});
 
 });
