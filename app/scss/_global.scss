@@ -7,6 +7,7 @@ body {
    flex-direction: column;
    @extend %dnsans-400;
    color: #243f4d;
+   background-color: inherit;
 }
 h1,
 h2,
@@ -32,3 +33,37 @@ h6 {
 .mixitup-control-active {
    color: $title;
 }
+
+.top {
+   color: #222933;
+   background-color: #edf1f4;
+   padding: 35px 0;
+   &__title {
+     @extend %rubik-300;
+     font-size: 36px;
+     line-height: 24px;
+     text-align: center;
+     margin-bottom: 13px;
+   }
+ }
+ .breadcrumbs {
+   @extend %rubik-400;
+   font-size: 14px;
+   line-height: 24px;
+     &__list {
+     display: flex;
+     justify-content: center;
+   }
+   &__item {
+     padding: 0 10px;
+     position: relative;
+     &:not(:last-child) {
+     color: rgba(#222933, .6);
+     }
+     &:not(:last-child)::after {
+       content: '/';
+       position: absolute;
+       right: -4px;
+     }
+   }
+ }

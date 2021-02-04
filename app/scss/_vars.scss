@@ -13,6 +13,10 @@ $title: #191919;
   font-family: 'DMSans-Bold', sans-serif;
   font-weight: 700;
 }
+%rubik-300 {
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
 %rubik-400 {
   font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
@@ -64,5 +68,18 @@ $title: #191919;
   margin: 30px 15px 80px;
   cursor: pointer;
 }
+%checkbox-hide {
+  width: 0;
+  height: 0;
+  margin: 0;
+}
 
 
+
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
