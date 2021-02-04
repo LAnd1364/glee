@@ -10,39 +10,17 @@ $(function() {
       fade: true,    
    });
 
+var popular__items = document.querySelector('.popular__items');
+var newdesign__items = document.querySelector('.new-design__items');
 
-   // $('.popular__items').mixItUp({
-   //    selectors: {
-   //      filter: '.popular__filt-btn',
-   //    }
-   //  });
-    
-   //  $('.new-design__items').mixItUp({
-   //    selectors: {
-   //      filter: '.new-design__filt-btn',
-   //    }
-   //  });
-
-   // var mixer1 = mixitup('.popular__items');
-   // var mixer2 = mixitup('.new-design__items');
-
-
-   
-   
-// var containerEl1 = document.querySelector('.popular__items');
-// var containerEl2 = document.querySelector('.new-design__items');
-
-var containerEl1 = document.querySelector('#MixItUp1');
-var containerEl2 = document.querySelector('#MixItUp2');
-
-var mixer1 = mixitup(containerEl1, {
+var mixer1 = mixitup(popular__items, {
    selectors: {
-      elementFilter: 'popular__filt-btn'
+      control: '.popular__filt-btn'
    }
 });
-var mixer2 = mixitup(containerEl2, {
+var mixer2 = mixitup(newdesign__items, {
    selectors: {
-      elementFilter: 'new-design__filt-btn'
+      control: '.new-design__filt-btn'
    }
 });
 
