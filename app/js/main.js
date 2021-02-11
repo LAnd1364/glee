@@ -1,5 +1,6 @@
 $(function() {
 
+   // --------------------userNav--------------------
    $('.user-nav__search-btn').on('click', function() {
      $('.user-nav__form').toggleClass('user-nav__form--active');
    });
@@ -47,6 +48,39 @@ $('.product-list__display-list').on('click', function() {
    $('.pagination').addClass('pagination--list');
 });
 
+// --------------------product-det__more-btn--------------------
+$('.product-det__more-btn').on('click', function(e) {
+   e.preventDefault()
+   $('.product-det__more-btn').removeClass('product-det__more-btn--active');
+   $(this).addClass('product-det__more-btn--active');
+   $('.product-det__more-content').removeClass('product-det__more-content--active');
+   $($(this).attr('href')).addClass('product-det__more-content--active');
+});
+
+// --------------------Sliick-------------------
+$('.product-det__slider-s').slick({
+   vertical: true,
+   slidesToShow: 3,
+   slidesToScroll: 1,
+   focusOnSelect: true,
+   asNavFor: '.product-det__slider-l'
+ });
+ $('.product-det__slider-l').slick({
+   fade: true,
+   arrows: false,
+   asNavFor: '.product-det__slider-s',
+   centerMode: true,
+ });
+
+// --------------------Sliick-------------------
+$('.related-prod__slider').slick({
+   infinite: false,
+   slidesToShow: 4,
+   slidesToScroll: 1,
+   prevArrow: '<button type="button" class="slick-prev"></button>',
+   nextArrow: '<button type="button" class="slick-next"></button>',
+});
+
 // --------------------Sliick-------------------
 $('.slider__inner').slick({
    arrows: false,
@@ -69,7 +103,7 @@ $(".price-filter__input").ionRangeSlider({
    },
 });
 
-// --------------------Sliick-------------------
+// --------------------RateYo-------------------
 $('.star').rateYo({
    readOnly: true,
    starWidth: "11px",
@@ -87,6 +121,9 @@ $('.star-l').rateYo({
    ratedFill: "#ffcc00",
    starSvg: '<svg xmlns="http://www.w3.org/2000/svg" width="17pt" height="16pt" viewBox="0 0 17 16" version="1.1"><path d="M 7.519531 0.535156 L 5.621094 4.511719 L 1.386719 5.15625 C 0.628906 5.265625 0.324219 6.238281 0.878906 6.789062 L 3.9375 9.890625 L 3.214844 14.261719 C 3.082031 15.046875 3.890625 15.644531 4.558594 15.277344 L 8.347656 13.210938 L 12.136719 15.277344 C 12.808594 15.636719 13.613281 15.046875 13.484375 14.261719 L 12.757812 9.890625 L 15.820312 6.789062 C 16.371094 6.238281 16.066406 5.265625 15.308594 5.15625 L 11.074219 4.511719 L 9.179688 0.535156 C 8.839844 -0.175781 7.855469 -0.179688 7.519531 0.535156 Z M 7.519531 0.535156 "/></svg>',
 });
+
+// --------------------Styler-------------------
+$('.product-det__cart-input').styler({});
 
 
 // --------------------MixItUp-------------------
