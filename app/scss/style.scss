@@ -151,6 +151,9 @@
   }
   &__link  {
     @extend %btn-arrow;
+    &::after {
+      background-image: url(../images/icons/arrow-right-white.svg);
+    }
   }
   &__img {
     max-width: 640px;
@@ -1682,6 +1685,257 @@ ul.services__list {
     transition: all .3s;
     &:hover {
       background-color: rgba($btn, .9);
+    }
+  }
+}
+.about {
+  &__title {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+  }
+}
+.about-company {
+  display: flex;
+  padding: 120px 0;
+  &__img {
+    width: 570px;
+    // height: 676px;
+    object-fit: cover;
+    margin-right: 50px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 550px;
+  }
+  &__pre-title {
+    display: flex;
+    align-items: baseline;
+  }
+  &__age {
+    @extend %rubik-700;
+    font-size: 140px;
+    color: $btn;
+    margin-right: 28px;
+  }
+  &__pre-title-text {
+    transform: translateY(-60px);
+    span {
+      display: block;
+      @extend %rubik-400;
+      line-height: 30px;
+    }
+  }
+  &__title {
+    transform: translateY(-16px);
+    margin-bottom: 24px;
+  }
+  &__text {
+    @extend %rubik-400;
+    line-height: 30px;
+    margin-bottom: 60px;
+  }
+  &__achiev {
+    display: flex;
+    font-weight: 700;
+    padding-top: 40px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 500px;
+      height: 2px;
+      background-color: #ebeef3;
+      position: absolute;
+      top: 0;
+    }
+  }
+  &__achiev-item {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 27px;
+    }
+  }
+  &__achiev-item--proj {
+    padding: 10px 27px 15px 55px;
+    &::before {
+      width: 36px;
+      height: 38px;
+      background-image: url(../images/icons/list-about.svg);
+      left: 0;
+      top: 19px;
+    }
+  }
+  &__achiev-item--reven {
+    padding: 10px 27px 15px 87px;
+    border-left: 1px solid #e6eaf0;
+    border-right: 1px solid #e6eaf0;
+    &::before {
+      width: 43px;
+      height: 39px;
+      background-image: url(../images/icons/horn-about.svg);
+      top: 17px;
+    }
+  }
+  &__achiev-item--awards {
+    padding: 10px 0 15px 87px;
+    &::before {
+      width: 42px;
+      height: 40px;
+      background-image: url(../images/icons/medal-about.svg);
+      top: 18px;
+    }
+  }
+  &__achiev-num {
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 6px;
+  }
+  &__achiev-name {
+    font-size: 16px;
+    line-height: 18px;
+    color: #4c4c4c;
+  }
+}
+.about-statistic {
+  background-color: #fcd7b6;
+  &__inner {
+    display: flex;
+    align-items: baseline;
+    padding: 80px 0;
+  }
+  &__item  {
+    width: 25%;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__img {
+    margin: 0 auto;
+  }
+  &__num {
+    margin: 22px 0 18px;
+  }
+  &__name {
+    font-size: 18px;
+  }
+}
+.about-team {
+  padding: 120px 0 20px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    max-width: 320px;
+    margin-right: 25px;
+  }
+  &__title {
+    margin-bottom: 25px;
+  }
+  &__text {
+    @extend %rubik-400;
+    line-height: 30px;
+    margin-bottom: 35px;
+  }
+  &__link {
+    @extend %btn-arrow;
+    padding: 20px 60px 20px 15px;
+    border-radius: 5px;
+    &::after {
+      background-image: url(../images/icons/arrow-right-white.svg);
+    }
+  }
+  &__people {
+    max-width: 770px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+  }
+  &__person-img {
+    max-width: 370px;
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    transition: all .3s;
+    &:hover {
+      opacity: .9;
+    }
+  }
+  &__person-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 325px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    padding: 28px 20px 23px 25px;
+    margin-bottom: -10px;
+    transform: translateY(-50px);
+  }
+  &__person-info {
+  }
+  &__person-name {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #436372;
+    margin-bottom: 10px;
+    transition: all .3s;
+    &:hover {
+      color: $btn;
+    }
+  }
+  &__person-post {
+    @extend %rubik-400;
+    line-height: 30px;
+    color: #565872;
+  }
+  &__person-social {
+    display: flex;
+  }
+  &__person-link {
+    width: 41px;
+    height: 41px;
+    background-color: #f6f6f6;
+    border-radius: 50%;
+    margin-left: 7px;
+    position: relative;
+    transition: all .3s;
+  }
+  &__person-inst::before {
+    content: '';
+    width: 17px;
+    height: 17px;
+    background-image: url(../images/icons/about-inst.svg);
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    transition: all .3s;
+  }
+  &__person-inst:hover {
+    background-color: rgba(#f6f6f6, .5);
+    &::before {
+      background-image: url(../images/icons/about-inst-blue.svg);
+    }
+  }
+  &__person-google::before {
+    content: '';
+    width: 23px;
+    height: 14px;
+    background-image: url(../images/icons/about-google.svg);
+    position: absolute;
+    top: 13px;
+    left: 9px;
+    transition: all .3s;
+  }
+  &__person-google:hover {
+    background-color: rgba(#f6f6f6, .5);
+    &::before {
+      background-image: url(../images/icons/about-google-blue.svg);
     }
   }
 }
