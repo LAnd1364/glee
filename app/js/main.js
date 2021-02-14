@@ -57,6 +57,13 @@ $('.product-det__more-btn').on('click', function(e) {
    $($(this).attr('href')).addClass('product-det__more-content--active');
 });
 
+// --------------------------------------------------------------
+// $('.contact__item--email').hover(function() {
+//    $('.contact__pretitle').css("transform", "scale(5)");
+// }, function(){
+// $('.contact__pretitle').css("transform", "scale(1)");
+// });
+
 // --------------------Sliick-------------------
 $('.product-det__slider-s').slick({
    vertical: true,
