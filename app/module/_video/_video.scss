@@ -1,0 +1,31 @@
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 120px 0 20px;
+  &__play-btn {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all .3s;
+    &:hover {
+      background-color: rgba(163, 187, 200, .4);
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 98px;
+      height: 98px;
+      background-image: url(../images/icons/video__play-btn.svg);
+      position: relative;
+    }
+  }
+}

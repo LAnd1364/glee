@@ -1,0 +1,12 @@
+.product-filters {
+  text-align: center;
+  &__btn {
+    @extend %dnsans-700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #8b8b8b;
+    background-color: transparent;
+    margin: 30px 15px 80px;
+    cursor: pointer;
+  }
+}

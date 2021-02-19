@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Glee Product</title>
+   <link rel="stylesheet" href="css/product-details.min.css">
+</head>
+
+<body>
+{% include "app/module/_header/_header.njk" %}
+
+   <main class="main">
+
+      <div class="top">
+         <div class="container-s">
+            <div class="top__inner">
+               <h2 class="top__title">Product Detalis</h2>
+               <div class="breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                     <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Home</a>
+                     </li>
+                     <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Product detalis</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <section class="product-det">
+         <div class="container-s">
+            <div class="product-det__main">
+               <div class="product-det__slider">
+                  <div class="product-det__slider-s">
+                     <div class="product-det__box-img-s">
+                        <img class="product-det__img-s" src="images/lamps/lamp-1.png" alt="product image">
+                     </div>
+                     <div class="product-det__box-img-s">
+                        <img class="product-det__img-s" src="images/lamps/lamp-2.png" alt="product image">
+                     </div>
+                     <div class="product-det__box-img-s">
+                        <img class="product-det__img-s" src="images/lamps/lamp-1.png" alt="product image">
+                     </div>
+                  </div>
+                  <div class="product-det__slider-l">
+                     <div class="product-det__box-img-l">
+                        <img class="product-det__img-l" src="images/lamps/lamp-1.png" alt="product image">
+                     </div>
+                     <div class="product-det__box-img-l">
+                        <img class="product-det__img-l" src="images/lamps/lamp-2.png" alt="product image">
+                     </div>
+                     <div class="product-det__box-img-l">
+                        <img class="product-det__img-l" src="images/lamps/lamp-1.png" alt="product image">
+                     </div>
+                  </div>
+               </div>
+               <div class="product-det__info">
+                  <h2 class="product-det__title">Pendant lamp</h2>
+                  <div class="star-l" data-rateyo-rating="4"></div>
+                  <span class="product-det__price">23$</span>
+                  <p class="product-det__desc">
+                     consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                     enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                  <form class="product-det__cart-form" action="#">
+                     <input class="product-det__cart-input" type="number" value="1" min="1">
+                     <button class="product-det__cart-btn">Add to cart</button>
+                  </form>
+                  <div class="product-det__short">
+                     <span class="product-det__short-info">SKU: 014</span>
+                     <span class="product-det__short-info">Category: Lights</span>
+                     <span class="product-det__short-info">Tag: Decorative</span>
+                  </div>
+               </div>
+            </div>
+            <div class="product-det__more">
+               <div class="product-det__more-btn-box">
+                  <a class="product-det__more-btn product-det__more-btn--active" href="#desc">Description</a>
+                  <a class="product-det__more-btn" href="#add">Additional information</a>
+                  <a class="product-det__more-btn" href="#rev">Reviews <span class="product-det__more-btn-num">(2)</span></a>
+               </div>
+               <div class="product-det__content-box">
+                  <div class="product-det__more-content product-det__more-content--active" id="desc">
+                     consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                     enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem
+                     ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                     aliquip ex ea commodo consequat.
+                  </div>
+                  <div class="product-det__more-content" id="add">Additional information</div>
+                  <div class="product-det__more-content" id="rev">Reviews</div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="related-prod">
+         <div class="container-s">
+            <h3 class="related-prod__title">Related products</h3>
+            <div class="related-prod__slider-wrap">
+
+               {% include "app/module/_product-items/_product-items.njk" %}
+
+            </div>
+         </div>
+      </section>
+
+{% include "app/module/_articles/_articles.njk" %}
+
+{% include "app/module/_partners/_partners.njk" %}
+
+   </main>
+
+{% include "app/module/_footer/_footer.njk" %}
+
+   <script src="js/main.min.js"></script>
+</body>
+
+</html>

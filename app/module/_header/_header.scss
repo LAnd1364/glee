@@ -1,0 +1,111 @@
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 0 45px;
+  }
+}
+.menu {
+  padding-left: 155px;
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  &__item {
+    padding-top: 10px;
+  }
+  &__item + .menu__item {
+    margin-left: 30px;
+  }
+  &__item-link {
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    color: #436372;
+    white-space: nowrap;
+    padding: 0 2px 2px 1px;
+    border-bottom: 1px solid transparent;
+    transition: all .3s;
+    &:hover {
+      border-bottom: 1px solid #436372;
+    }
+  }
+}
+.user-nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  &__form {
+    position: absolute;
+    top: 60px;
+    opacity: 0;
+    &--active {
+      opacity: 1;
+    }
+  }
+  &__input {
+    width: 210px;
+    font-size: 15px;
+    padding: 1px 5px;
+    border: 2px solid #edf1f4;
+    border-radius: 4px;
+  }
+  &__search-btn {
+    width: 51px;
+    height: 51px;
+    text-align: center;
+    background-color: #edf1f4;
+    border: none;
+    border-radius: 50%;
+    margin-right: 21px;
+  }
+  &__search-img {
+    margin: 0 auto;
+  }
+  &__wishlist-link,
+  &__cart-link {
+    width: 90px;
+    height: 51px;
+    position: relative;
+    background-color: #fcd7b6;
+    padding-top: 22px;
+  }
+  &__wishlist-link {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 1px;
+      height: 32px;
+      background-color: #fde7d3;
+      position: absolute;
+      left: 90px;
+      bottom: 9px;
+      z-index: 1;
+    }
+  }
+  &__cart-link {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  &__num {
+    position: absolute;
+    top: 13px;
+    left: 47px;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  &__wishlist-img,
+  &__cart-img {
+    margin: 0 auto;
+  }
+  &__catalog-link {
+    margin-left: 18px;
+  }
+}

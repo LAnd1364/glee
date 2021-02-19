@@ -1,0 +1,128 @@
+.articles {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 50px;
+  }
+  &__title {
+    @extend %section-title;
+  }
+  &__top-link {
+    font-size: 16px;
+    font-weight: 700;
+    color: #262626;
+    padding-right: 25px;
+    position: relative;
+    transition: all .3s;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 5px;
+      width: 6px;
+      height: 11px;
+      background-image: url(../images/icons/angle-right.svg);
+    }
+    &:hover {
+      transform: scale(1.07);
+    }
+  }
+  &__inner {
+    display: flex;
+  }
+  &__item {
+    width: 370px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__item-img {
+    width: 370px;
+    height: 250px;
+    object-fit: cover;
+  }
+  &__item-news-link {
+    display: block;
+    max-width: fit-content;
+    @extend %poppins-700;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $btn;
+    padding: 5px 30px;
+    border-radius: 15px;
+    margin-left: 30px;
+    transform: translateY(-15px);
+    transition: all .3s;
+    &:hover {
+      font-size: 15px;
+    }
+  }
+  &__item-box {
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px 30px;
+  }
+  &__item-title {
+    font-size: 18px;    
+    font-weight: 500;
+    color: #262626;
+    border-bottom: 1px solid transparent;
+    & svg {
+      margin-left: 15px;
+      path {
+        fill: #fff;
+        transition: all .4s;
+      }
+    }
+    &:hover svg {
+      path {
+        fill: rgba(#262626, .9);
+      }
+    }
+  }
+  &__item-bottom {
+    @extend %rubik-400;
+    font-size: 12px;
+    line-height: 30px;
+    color: #222933;
+    padding-top: 12px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: auto;
+  }
+  &__item-date {
+    padding-left: 12px;
+    position: relative;
+  }
+  &__author-link {
+    padding-left: 12px;
+    border-bottom: 1px solid transparent;
+    margin-left: 30px;
+    position: relative;
+    transition: all .3s;
+    &:hover {
+      border-bottom: 1px solid #222933;
+    }
+  }
+  &__item-date::before,
+  &__author-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 11px;
+    height: 13px;
+    background-image: url(../images/icons/calendar.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__item-author::before {
+    background-image: url(../images/icons/user.svg);
+  }
+}
