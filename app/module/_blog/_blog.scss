@@ -1,0 +1,97 @@
+@import '../module/_blog-aside/_blog-aside';
+@import '../module/_pagination/_pagination';
+
+.blog {
+  &__inner {
+    display: flex;
+    padding: 120px 0;
+  }
+  &__content {
+    max-width: 830px;
+    margin-right: 70px;
+  }
+  &__item-img {
+    width: 830px;
+    height: 500px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    opacity: 1;
+    transition: all .3s;
+    position: relative;
+    &:hover {
+      opacity: .9;
+    }
+  }
+  &__item-info {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    height: 70px;
+    @extend %rubik-400;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $btn;
+    padding-left: 20px;
+    position: absolute;
+    transform: translateY(-180px);
+  }
+  &__item-date {
+    padding-left: 20px;
+    position: relative;
+  }
+  &__item-author {
+    border-bottom: 1px solid transparent;
+    padding-left: 20px;
+    margin-left: 20px;
+    position: relative;
+    transition: all .3s;
+    &:hover {
+      border-bottom: 1px solid #fff;
+    }
+  }
+  &__item-date::before,
+  &__item-author::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 11px;
+    height: 13px;
+    background-image: url(../images/icons/calendar-white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__item-author::before {
+    background-image: url(../images/icons/user-white.svg);
+  }
+  &__item-title {
+    display: inline-block;
+    @extend %rubik-400;
+    font-size: 36px;
+    line-height: 40px;
+    color: #333;
+    border-bottom: 1px solid transparent;
+    margin-bottom: 30px;
+    transition: all .3s;
+    &:hover {
+      border-bottom: 1px solid #333;
+    }
+  }
+  &__item-text {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    
+  }
+  &__item-link {
+    @extend %btn-arrow;
+    color: $btn;
+    background-color: #fff;
+    border: 1px solid $btn;
+    margin: 43px 0 50px;
+    &:hover {
+      background-color: rgba($btn, .1);
+    }
+  }
+}

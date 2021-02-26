@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<header class="header">
+   <header class="header">
    <div class="container-l">
       <div class="header__inner">
          <a class="logo" href="#">
@@ -36,6 +36,11 @@
                   <a class="menu__item-link" href="#">Contact</a>
                </li>
             </ul>
+            <button class="menu__btn">
+               <span class="menu__btn-line-1"></span>
+               <span class="menu__btn-line-2"></span>
+               <span class="menu__btn-line-3"></span>
+            </button>
          </nav>
          <div class="user-nav">
             <form class="user-nav__form">
@@ -44,14 +49,16 @@
             <button class="user-nav__search-btn">
                <img class="user-nav__search-img" src="images/icons/search.svg" alt="search icon">
             </button>
-            <a class="user-nav__wishlist-link" href="#">
-               <img class="user-nav__wishlist-img" src="images/icons/heart.png" alt="wishlist icon">
-               <span class="user-nav__num">0</span>
-            </a>
-            <a class="user-nav__cart-link" href="#">
-               <img class="user-nav__cart-img" src="images/icons/cart.svg" alt="cart icon">
-               <span class="user-nav__num">0</span>
-            </a>
+            <div class="user-nav__links">
+               <a class="user-nav__wishlist-link" href="#">
+                  <img class="user-nav__wishlist-img" src="images/icons/heart.png" alt="wishlist icon">
+                  <span class="user-nav__num">0</span>
+               </a>
+               <a class="user-nav__cart-link" href="#">
+                  <img class="user-nav__cart-img" src="images/icons/cart.svg" alt="cart icon">
+                  <span class="user-nav__num">0</span>
+               </a>
+            </div>
             <a class="user-nav__catalog-link" href="#">
                <img class="user-nav__catalog-img" class="" src="images/icons/catalog.svg" alt="catalog icon">
             </a>
@@ -63,22 +70,22 @@
    <main class="main">
 
       <div class="top">
-         <div class="container-s">
-            <div class="top__inner">
-               <h2 class="top__title">Terms & Conditions</h2>
-               <div class="breadcrumbs">
-                  <ul class="breadcrumbs__list">
-                     <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link" href="#">Home</a>
-                     </li>
-                     <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link" href="#">Terms & Conditions</a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
+   <div class="container-s">
+      <div class="top__inner">
+         <h2 class="top__title">About Us</h2>
+         <div class="breadcrumbs">
+   <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+         <a class="breadcrumbs__link" href="#">Home</a>
+      </li>
+      <li class="breadcrumbs__item">
+         <a class="breadcrumbs__link" href="#">About Us</a>
+      </li>
+   </ul>
+</div>
       </div>
+   </div>
+</div>
 
       <section class="terms">
          <div class="container-s">
@@ -125,7 +132,7 @@
 <section class="articles">
    <div class="container-s">
       <div class="articles__top">
-         <h2 class="articles__title">Our Insights & Articles</h2>
+         <h2 class="articles__title section-title">Our Insights & Articles</h2>
          <a class="articles__top-link" href="#">View All</a>
       </div>
       <div class="articles__inner">
@@ -146,8 +153,8 @@
                   </a>
                </h4>
                <div class="articles__item-bottom">
-                  <span class="articles__item-date"> 28 JANUARY, 2020</span>
-                  <a class="articles__author-link" href="#"> BY ADMIN</a>
+                  <span class="articles__item-date">28 JANUARY, 2020</span>
+                  <a class="articles__author-link" href="#">BY ADMIN</a>
                </div>
             </div>
          </div>
@@ -168,8 +175,8 @@
                   </a>
                </h4>
                <div class="articles__item-bottom">
-                  <span class="articles__item-date"> 28 JANUARY, 2020</span>
-                  <a class="articles__author-link" href="#"> BY ADMIN</a>
+                  <span class="articles__item-date">28 JANUARY, 2020</span>
+                  <a class="articles__author-link" href="#">BY ADMIN</a>
                </div>
             </div>
          </div>
@@ -190,8 +197,8 @@
                   </a>
                </h4>
                <div class="articles__item-bottom">
-                  <span class="articles__item-date"> 28 JANUARY, 2020</span>
-                  <a class="articles__author-link" href="#"> BY ADMIN</a>
+                  <span class="articles__item-date">28 JANUARY, 2020</span>
+                  <a class="articles__author-link" href="#">BY ADMIN</a>
                </div>
             </div>
          </div>
@@ -243,8 +250,8 @@
                </li>
             </ul>
          </div>
-         <div class="footer-top__item">
-            <h5 class="footer-top__item-title">Services</h5>
+         <div class="footer-top__item footer-top__services">
+            <h5 class="footer-top__item-title footer-top__item-title-slide">Services</h5>
             <ul class="footer-top__top-list">
                <li class="footer-top__list-item">
                   <a class="footer-top__list-link" href="#">About us</a>
@@ -264,7 +271,7 @@
             </ul>
          </div>
          <div class="footer-top__item footer-top__account">
-            <h5 class="footer-top__item-title">Account</h5>
+            <h5 class="footer-top__item-title footer-top__item-title-slide">Account</h5>
             <ul class="footer-top__top-list">
                <li class="footer-top__list-item">
                   <a class="footer-top__list-link" href="#">Your Account</a>
@@ -282,7 +289,7 @@
          </div>
          <div class="footer-top__item footer-top__newsletter">
             <h5 class="footer-top__item-title">newsletter</h5>
-            <p class="footer-top__item-text">
+            <p class="footer-top__item-text"> 
                Subscribe by our newsletter and get update protidin.
             </p>
             <form class="footer-top__form">

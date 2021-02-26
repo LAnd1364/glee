@@ -10,3 +10,36 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: 1500px) {
+  .product-filters {
+    &__btn {
+      margin: 20px 15px 50px;
+    }
+  }
+}
+@media (max-width: 890px) {
+  .product-filters {
+    &__btn {
+      margin: 12px 13px 40px;
+    }
+  }
+}
+@media (max-width: 660px) {
+  .product-filters {
+    &__btn {
+      margin: 8px 10px 25px;
+    }
+  }
+}
+@media (max-width: 420px) {
+  .product-filters {
+    &__btn {
+      margin: 4px 4px 25px;
+    }
+    &__btn:first-child {
+      display: block;
+      margin: 10px auto 0;
+    }
+  }
+}

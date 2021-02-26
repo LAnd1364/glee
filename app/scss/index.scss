@@ -1,24 +1,19 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'media';
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 @import '../../node_modules/mixitup/tests/functional/styles.css';
 @import 'global';
 @import '../module/_header/_header';
 @import '../module/_slider-start-page/_slider-start-page';
 @import '../module/_services/_services';
-@import '../module/_product-items/_product-items';
 @import '../module/_product-filters/_product-filters';
-.products {
-  &__title {
-    @extend %section-title;
-  }
-}
-.product-item__wrap:nth-child(n+9) {
-  display: none;
-}
+@import '../module/_products/_products';
 @import '../module/_lamps/_lamps';
+@import '../module/_new-design/_new-design';
 @import '../module/_video/_video';
 @import '../module/_articles/_articles';
 @import '../module/_partners/_partners';
 @import '../module/_footer/_footer';
+

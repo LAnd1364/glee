@@ -7,7 +7,7 @@
 .footer-top {
   display: flex;
   justify-content: space-between;
-  padding: 100px 0 75px;
+  padding: 100px 0 65px;
   border-bottom: 1px solid #dae4e9;
   &__item-title {
     @extend %dnsans-700;
@@ -16,12 +16,15 @@
     color: #1f2044;
     margin-top: 16px;
     margin-bottom: 20px;
+    &-slide {
+      pointer-events: none;
+    }
   }
   &__item {
     max-width: 192px;
     & .logo {
       display: block;
-      margin-bottom: 32px;
+      padding-bottom: 32px;
     }
     & span {
       text-transform: uppercase;
@@ -34,10 +37,13 @@
     max-width: 270px;
   }
   &__list-item {
-    margin-top: 10px;    
+    margin-bottom: 10px;    
   }
   &__item-text {
     margin-bottom: 32px;
+  }
+  &__form {
+    display: flex;
   }
   &__input {
     @extend %dnsans-400;
@@ -54,7 +60,6 @@
     color: #fff;
     background-color: $btn;
     padding: 8px 18px 9px 15px;
-    margin-left: -4px;
   }
 }
 .footer-bottom {
@@ -73,5 +78,107 @@
   }
   &__menu-item:not(:last-child) {
     border-right: 1px solid #7b7b7b;
+  }
+}
+
+@media (max-width: 1180px) {
+  .footer-top {
+    padding: 70px 0 40px;
+    &__account {
+      margin: 0;
+    }
+  }
+}
+@media (max-width: 990px) {
+  .footer-top {
+    padding: 55px 0 30px;
+    &__form {
+      flex-direction: column;
+    }
+    &__newsletter {
+      max-width: 185px;
+    }
+  }
+}
+@media (max-width: 740px) {
+  .footer-top {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px 0 5px;
+    &__item {
+      max-width: 50%;
+      width: 50%;
+    }
+    &__item:nth-child(-n+2) {
+      padding-right: 15px;
+    }
+    &__item-title-slide {
+      display: inline-block;
+      pointer-events: painted;
+      cursor: pointer;
+      position: relative;
+      &::after {
+        content: '';
+        width: 10pt;
+        height: 16pt;
+        background-image: url(../../images/icons/angle-down.svg);
+        position: absolute;
+        top: 1px;
+        right: -18px;
+        transition: all .5s;
+      }
+    }
+    &__item-title-slide--active {
+      &::after {
+        transform: rotateX(180deg);
+      }
+    }
+    &__top-list {
+      display: none;
+    }
+    &__form {
+      max-width: 200px;
+    }
+    &__services,
+    &__account {
+      order: 1;
+    }
+  }
+}
+@media (max-width: 660px) {
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    margin-left: -2px;
+    margin-right: -2px;
+    &__copy {
+      margin-bottom: 10px;
+    }
+    &__menu-item {
+      padding: 0 15px;
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+}
+@media (max-width: 520px) {
+  .footer-top {
+    display: block;
+    padding: 20px 0 10px;
+    &__item {
+      max-width: 100%;
+      width: 100%;
+      & .logo {
+        padding-bottom: 20px;
+      }
+    }
+    &__item-title {
+      margin: 15px 0;
+    }
+    &__item-text {
+      margin-bottom: 20px;
+    }
   }
 }

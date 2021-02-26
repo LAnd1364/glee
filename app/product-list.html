@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<header class="header">
+   <header class="header">
    <div class="container-l">
       <div class="header__inner">
          <a class="logo" href="#">
@@ -36,6 +36,11 @@
                   <a class="menu__item-link" href="#">Contact</a>
                </li>
             </ul>
+            <button class="menu__btn">
+               <span class="menu__btn-line-1"></span>
+               <span class="menu__btn-line-2"></span>
+               <span class="menu__btn-line-3"></span>
+            </button>
          </nav>
          <div class="user-nav">
             <form class="user-nav__form">
@@ -44,14 +49,16 @@
             <button class="user-nav__search-btn">
                <img class="user-nav__search-img" src="images/icons/search.svg" alt="search icon">
             </button>
-            <a class="user-nav__wishlist-link" href="#">
-               <img class="user-nav__wishlist-img" src="images/icons/heart.png" alt="wishlist icon">
-               <span class="user-nav__num">0</span>
-            </a>
-            <a class="user-nav__cart-link" href="#">
-               <img class="user-nav__cart-img" src="images/icons/cart.svg" alt="cart icon">
-               <span class="user-nav__num">0</span>
-            </a>
+            <div class="user-nav__links">
+               <a class="user-nav__wishlist-link" href="#">
+                  <img class="user-nav__wishlist-img" src="images/icons/heart.png" alt="wishlist icon">
+                  <span class="user-nav__num">0</span>
+               </a>
+               <a class="user-nav__cart-link" href="#">
+                  <img class="user-nav__cart-img" src="images/icons/cart.svg" alt="cart icon">
+                  <span class="user-nav__num">0</span>
+               </a>
+            </div>
             <a class="user-nav__catalog-link" href="#">
                <img class="user-nav__catalog-img" class="" src="images/icons/catalog.svg" alt="catalog icon">
             </a>
@@ -62,161 +69,160 @@
 
    <main class="main">
 
-      <section class="top">
-         <div class="container-s">
-            <div class="top__inner">
-               <h2 class="top__title">Product list 1</h2>
-               <div class="breadcrumbs">
-                  <ul class="breadcrumbs__list">
-                     <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link" href="#">Home</a>
-                     </li>
-                     <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link" href="#">Product list 1</a>
-                     </li>
-                  </ul>
+      <div class="top">
+   <div class="container-s">
+      <div class="top__inner">
+         <h2 class="top__title">About Us</h2>
+         <div class="breadcrumbs">
+   <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+         <a class="breadcrumbs__link" href="#">Home</a>
+      </li>
+      <li class="breadcrumbs__item">
+         <a class="breadcrumbs__link" href="#">About Us</a>
+      </li>
+   </ul>
+</div>
+      </div>
+   </div>
+</div>
+      <section class="product-list">
+   <div class="container-s">
+      <div class="product-list__inner">
+         <div class="product-list__aside">
+            <div class="filter">
+               <div class="aside-title-box">
+                  <h5 class="aside-title">CATEGORY</h5>
+                  <span class="aside-title-line"></span>
+               </div>
+               <form action="#" class="filter__form">
+                  <label class="filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <span class="filter__link filter__link--category">Chair</span>
+                  </label>
+                  <label class="filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <span class="filter__link filter__link--category">Table</span>
+                  </label>
+                  <label class="filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <span class="filter__link filter__link--category">Lamp</span>
+                  </label>
+                  <label class="filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <span class="filter__link filter__link--category">Watch</span>
+                  </label>
+                  <label class="filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <span class="filter__link filter__link--category">Clock</span>
+                  </label>
+               </form>
+            </div>
+            <div class="filter price-filter">
+               <div class="aside-title-box">
+                  <h5 class="aside-title">PRICE</h5>
+                  <span class="aside-title-line"></span>
+               </div>
+               <form action="#" class="filter__form">
+                  <input class="price-filter__input" type="text" data-min="0" data-max="1000" data-from="100.00"
+                     data-to="500.00">
+                  <div class="price-filter__diapason">
+                     $<span class="price-filter__from"></span>
+                     $<span class="price-filter__to"></span>
+                  </div>
+               </form>
+            </div>
+            <div class="filter">
+               <div class="aside-title-box">
+                  <h5 class="aside-title">BRAND</h5>
+                  <span class="aside-title-line"></span>
+               </div>
+               <form action="#" class="filter__form">
+                  <label class="brand-filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <div class="filter__link">
+                        <span class="filter__link-name">RFL</span>
+                        <span class="filter__link-num">(10)</span>
+                     </div>
+                  </label>
+                  <label class="brand-filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <div class="filter__link">
+                        <span class="filter__link-name">Brothers</span>
+                        <span class="filter__link-num">(21)</span>
+                     </div>
+                  </label>
+                  <label class="brand-filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <div class="filter__link">
+                        <span class="filter__link-name">Regal</span>
+                        <span class="filter__link-num">(3)</span>
+                     </div>
+                  </label>
+                  <label class="brand-filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <div class="filter__link">
+                        <span class="filter__link-name">Nadia</span>
+                        <span class="filter__link-num">(14)</span>
+                     </div>
+                  </label>
+                  <label class="brand-filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <div class="filter__link">
+                        <span class="filter__link-name">Otobi</span>
+                        <span class="filter__link-num">(6)</span>
+                     </div>
+                  </label>
+               </form>
+            </div>
+            <div class="recent-products">
+               <div class="aside-title-box">
+                  <h5 class="aside-title">RECENT PRODUCTS</h5>
+                  <span class="aside-title-line"></span>
+               </div>
+               <div class="recent-products__item">
+                  <div class="recent-products__item-img-box">
+                     <img class="recent-products__item-img" src="images/recent-products/1.jpg"
+                        alt="product image">
+                  </div>
+                  <div class="recent-products__item-box">
+                     <a class="recent-products__item-link" href="#">
+                        <h6 class="recent-products__item-title">Pendant lamp</h6>
+                     </a>
+                     <div class="star" data-rateyo-rating="4"></div>
+                     <span class="recent-products__item-price">23$</span>
+                  </div>
+               </div>
+               <div class="recent-products__item">
+                  <div class="recent-products__item-img-box">
+                     <img class="recent-products__item-img" src="images/recent-products/2.jpg"
+                        alt="product image">
+                  </div>
+                  <div class="recent-products__item-box">
+                     <a class="recent-products__item-link" href="#">
+                        <h6 class="recent-products__item-title">Pendant lamp</h6>
+                     </a>
+                     <div class="star" data-rateyo-rating="4"></div>
+                     <span class="recent-products__item-price">23$</span>
+                  </div>
+               </div>
+               <div class="recent-products__item">
+                  <div class="recent-products__item-img-box">
+                     <img class="recent-products__item-img" src="images/recent-products/3.jpg"
+                        alt="product image">
+                  </div>
+                  <div class="recent-products__item-box">
+                     <a class="recent-products__item-link" href="#">
+                        <h6 class="recent-products__item-title">Pendant lamp</h6>
+                     </a>
+                     <div class="star" data-rateyo-rating="4"></div>
+                     <span class="recent-products__item-price">23$</span>
+                  </div>
                </div>
             </div>
          </div>
-      </section>
-
-      <section class="product-list">
-         <div class="container-s">
-            <div class="product-list__inner">
-               <div class="product-list__aside">
-                  <div class="filter">
-                     <div class="aside-title-box">
-                        <h5 class="aside-title">CATEGORY</h5>
-                        <span class="aside-title-line"></span>
-                     </div>
-                     <form action="#" class="filter__form">
-                        <label class="filter__label">
-                           <input class="filter__input" type="checkbox">
-                           <span class="filter__link filter__link--category">Chair</span>
-                        </label>
-                        <label class="filter__label">
-                           <input class="filter__input" type="checkbox">
-                           <span class="filter__link filter__link--category">Table</span>
-                        </label>
-                        <label class="filter__label">
-                           <input class="filter__input" type="checkbox">
-                           <span class="filter__link filter__link--category">Lamp</span>
-                        </label>
-                        <label class="filter__label">
-                           <input class="filter__input" type="checkbox">
-                           <span class="filter__link filter__link--category">Watch</span>
-                        </label>
-                        <label class="filter__label">
-                           <input class="filter__input" type="checkbox">
-                           <span class="filter__link filter__link--category">Clock</span>
-                        </label>
-                     </form>
-                  </div>
-                  <div class="filter price-filter">
-                     <div class="aside-title-box">
-                        <h5 class="aside-title">PRICE</h5>
-                        <span class="aside-title-line"></span>
-                     </div>
-                     <form action="#" class="filter__form">
-                        <input class="price-filter__input" type="text" data-min="0" data-max="1000" data-from="100.00"
-                           data-to="500.00">
-                        <div class="price-filter__diapason">
-                           $<span class="price-filter__from"></span>
-                           $<span class="price-filter__to"></span>
-                        </div>
-                     </form>
-                  </div>
-                  <div class="filter">
-                     <div class="aside-title-box">
-                        <h5 class="aside-title">BRAND</h5>
-                        <span class="aside-title-line"></span>
-                     </div>
-                     <form action="#" class="filter__form">
-                        <label class="brand-filter__label">
-                           <input class="filter__input" type="checkbox">
-                           <div class="filter__link">
-                              <span class="filter__link-name">RFL</span>
-                              <span class="filter__link-num">(10)</span>
-                           </div>
-                        </label>
-                        <label class="brand-filter__label">
-                           <input class="filter__input" type="checkbox">
-                           <div class="filter__link">
-                              <span class="filter__link-name">Brothers</span>
-                              <span class="filter__link-num">(21)</span>
-                           </div>
-                        </label>
-                        <label class="brand-filter__label">
-                           <input class="filter__input" type="checkbox">
-                           <div class="filter__link">
-                              <span class="filter__link-name">Regal</span>
-                              <span class="filter__link-num">(3)</span>
-                           </div>
-                        </label>
-                        <label class="brand-filter__label">
-                           <input class="filter__input" type="checkbox">
-                           <div class="filter__link">
-                              <span class="filter__link-name">Nadia</span>
-                              <span class="filter__link-num">(14)</span>
-                           </div>
-                        </label>
-                        <label class="brand-filter__label">
-                           <input class="filter__input" type="checkbox">
-                           <div class="filter__link">
-                              <span class="filter__link-name">Otobi</span>
-                              <span class="filter__link-num">(6)</span>
-                           </div>
-                        </label>
-                     </form>
-                  </div>
-                  <div class="recent-products">
-                     <div class="aside-title-box">
-                        <h5 class="aside-title">RECENT PRODUCTS</h5>
-                        <span class="aside-title-line"></span>
-                     </div>
-                     <div class="recent-products__item">
-                        <div class="recent-products__item-img-box">
-                           <img class="recent-products__item-img" src="images/recent-products/1.jpg"
-                              alt="product image">
-                        </div>
-                        <div class="recent-products__item-box">
-                           <a class="recent-products__item-link" href="#">
-                              <h6 class="recent-products__item-title">Pendant lamp</h6>
-                           </a>
-                           <div class="star" data-rateyo-rating="4"></div>
-                           <span class="recent-products__item-price">23$</span>
-                        </div>
-                     </div>
-                     <div class="recent-products__item">
-                        <div class="recent-products__item-img-box">
-                           <img class="recent-products__item-img" src="images/recent-products/2.jpg"
-                              alt="product image">
-                        </div>
-                        <div class="recent-products__item-box">
-                           <a class="recent-products__item-link" href="#">
-                              <h6 class="recent-products__item-title">Pendant lamp</h6>
-                           </a>
-                           <div class="star" data-rateyo-rating="4"></div>
-                           <span class="recent-products__item-price">23$</span>
-                        </div>
-                     </div>
-                     <div class="recent-products__item">
-                        <div class="recent-products__item-img-box">
-                           <img class="recent-products__item-img" src="images/recent-products/3.jpg"
-                              alt="product image">
-                        </div>
-                        <div class="recent-products__item-box">
-                           <a class="recent-products__item-link" href="#">
-                              <h6 class="recent-products__item-title">Pendant lamp</h6>
-                           </a>
-                           <div class="star" data-rateyo-rating="4"></div>
-                           <span class="recent-products__item-price">23$</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-<div class="product-display">
+         <div class="product-list__content">
+            <div class="product-display">
    <button
       class="product-display__btn product-display__grid product-display__btn--active">
       <svg width="15px" height="15px">
@@ -231,7 +237,7 @@
       </svg>
    </button>
 </div>
-<div class="product-items">
+            <div class="product-items">
   <div class="product-item__wrap mix category-furnitures">
     <div class="product-item">
        <div class="product-item__img-wrap">
@@ -1081,7 +1087,7 @@
     </div>
   </div>
 </div>
-<div class="pagination">
+            <div class="pagination">
    <button class="pagination__prev-btn" type="submit">Prev</button>
    <ul class="pagination__list">
       <li class="pagination__item">
@@ -1096,18 +1102,11 @@
    </ul>
    <button class="pagination__next-btn" type="submit">Next</button>
 </div>
-
-
-
-
-
-
-               
-            </div>
-         </div>
-      </section>
-
-<div class="partners">
+          </div>             
+      </div>
+   </div>
+</section>
+      <div class="partners">
    <div class="container-s">
       <div class="partners-block">
          <div class="partners__item">
@@ -1131,7 +1130,7 @@
 
    </main>
 
-<footer class="footer">
+   <footer class="footer">
    <div class="container-s">
       <div class="footer-top">
          <div class="footer-top__item">
@@ -1151,8 +1150,8 @@
                </li>
             </ul>
          </div>
-         <div class="footer-top__item">
-            <h5 class="footer-top__item-title">Services</h5>
+         <div class="footer-top__item footer-top__services">
+            <h5 class="footer-top__item-title footer-top__item-title-slide">Services</h5>
             <ul class="footer-top__top-list">
                <li class="footer-top__list-item">
                   <a class="footer-top__list-link" href="#">About us</a>
@@ -1172,7 +1171,7 @@
             </ul>
          </div>
          <div class="footer-top__item footer-top__account">
-            <h5 class="footer-top__item-title">Account</h5>
+            <h5 class="footer-top__item-title footer-top__item-title-slide">Account</h5>
             <ul class="footer-top__top-list">
                <li class="footer-top__list-item">
                   <a class="footer-top__list-link" href="#">Your Account</a>
@@ -1190,7 +1189,7 @@
          </div>
          <div class="footer-top__item footer-top__newsletter">
             <h5 class="footer-top__item-title">newsletter</h5>
-            <p class="footer-top__item-text">
+            <p class="footer-top__item-text"> 
                Subscribe by our newsletter and get update protidin.
             </p>
             <form class="footer-top__form">

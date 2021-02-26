@@ -3,6 +3,37 @@
 @import 'reset';
 @import 'global';
 @import '../module/_header/_header';
+@import '../module/_top/_top';
 @import '../module/_articles/_articles';
 @import '../module/_partners/_partners';
 @import '../module/_footer/_footer';
+
+.terms {
+  padding: 65px 0 20px;
+  p,
+  li {
+    @extend %rubik-400;
+    line-height: 30px;
+  }
+  &__title {
+    @extend %rubik-500;
+    font-size: 24px;
+    line-height: 40px;
+    margin: 55px 0 15px;
+  }
+  &__list {
+    counter-reset: number;
+  }
+  &__list-item {
+    list-style: none;
+    position: relative;
+    &::before {
+      content: '0' counter(number) '.';
+      counter-increment: number;
+      padding-right: 8px;
+    }
+    &:nth-child(n+10)::before {
+      content: counter(number) '.';
+    }
+  }
+}

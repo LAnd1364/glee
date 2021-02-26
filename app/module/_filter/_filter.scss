@@ -1,0 +1,38 @@
+.filter {
+  padding-bottom: 40px;
+  &__input {
+    width: 0;
+    height: 0;
+    position: absolute;
+    &:checked + .filter__link {
+      background-color: #edf1f4;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    @extend %rubik-400;
+    line-height: 24px;
+    padding: 0 25px 0 15px;
+    border-radius: 4px;
+  }
+  &__link--category {
+    position: relative;
+    transition: all .3s;
+    &::after {
+      content: '';
+      width: 5px;
+      height: 10px;
+      position: absolute;
+      line-height: 100% ;
+      top: 15px;
+      right: 25px;
+      background-image: url(../images/icons/angle-right-catalog.svg);
+    }
+    &:hover {
+      background-color: #edf1f4;
+    }
+  }
+}

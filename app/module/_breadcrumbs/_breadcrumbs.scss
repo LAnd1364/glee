@@ -1,0 +1,27 @@
+.breadcrumbs {
+  @extend %rubik-400;
+  font-size: 14px;
+  line-height: 24px;
+    &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__item {
+    white-space: nowrap;
+    padding: 0 10px;
+    position: relative;
+    z-index: 5;
+    &--noact {
+      z-index: 0;
+    }
+    &:not(:last-child) {
+    color: rgba(#222933, .6);
+    }
+    &:not(:last-child)::after {
+      content: '/';
+      position: absolute;
+      right: -4px;
+    }
+  }
+}

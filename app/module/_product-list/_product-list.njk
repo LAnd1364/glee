@@ -1,0 +1,143 @@
+<section class="product-list">
+   <div class="container-s">
+      <div class="product-list__inner">
+         <div class="product-list__aside">
+            <div class="filter">
+               <div class="aside-title-box">
+                  <h5 class="aside-title">CATEGORY</h5>
+                  <span class="aside-title-line"></span>
+               </div>
+               <form action="#" class="filter__form">
+                  <label class="filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <span class="filter__link filter__link--category">Chair</span>
+                  </label>
+                  <label class="filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <span class="filter__link filter__link--category">Table</span>
+                  </label>
+                  <label class="filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <span class="filter__link filter__link--category">Lamp</span>
+                  </label>
+                  <label class="filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <span class="filter__link filter__link--category">Watch</span>
+                  </label>
+                  <label class="filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <span class="filter__link filter__link--category">Clock</span>
+                  </label>
+               </form>
+            </div>
+            <div class="filter price-filter">
+               <div class="aside-title-box">
+                  <h5 class="aside-title">PRICE</h5>
+                  <span class="aside-title-line"></span>
+               </div>
+               <form action="#" class="filter__form">
+                  <input class="price-filter__input" type="text" data-min="0" data-max="1000" data-from="100.00"
+                     data-to="500.00">
+                  <div class="price-filter__diapason">
+                     $<span class="price-filter__from"></span>
+                     $<span class="price-filter__to"></span>
+                  </div>
+               </form>
+            </div>
+            <div class="filter">
+               <div class="aside-title-box">
+                  <h5 class="aside-title">BRAND</h5>
+                  <span class="aside-title-line"></span>
+               </div>
+               <form action="#" class="filter__form">
+                  <label class="brand-filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <div class="filter__link">
+                        <span class="filter__link-name">RFL</span>
+                        <span class="filter__link-num">(10)</span>
+                     </div>
+                  </label>
+                  <label class="brand-filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <div class="filter__link">
+                        <span class="filter__link-name">Brothers</span>
+                        <span class="filter__link-num">(21)</span>
+                     </div>
+                  </label>
+                  <label class="brand-filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <div class="filter__link">
+                        <span class="filter__link-name">Regal</span>
+                        <span class="filter__link-num">(3)</span>
+                     </div>
+                  </label>
+                  <label class="brand-filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <div class="filter__link">
+                        <span class="filter__link-name">Nadia</span>
+                        <span class="filter__link-num">(14)</span>
+                     </div>
+                  </label>
+                  <label class="brand-filter__label">
+                     <input class="filter__input" type="checkbox">
+                     <div class="filter__link">
+                        <span class="filter__link-name">Otobi</span>
+                        <span class="filter__link-num">(6)</span>
+                     </div>
+                  </label>
+               </form>
+            </div>
+            <div class="recent-products">
+               <div class="aside-title-box">
+                  <h5 class="aside-title">RECENT PRODUCTS</h5>
+                  <span class="aside-title-line"></span>
+               </div>
+               <div class="recent-products__item">
+                  <div class="recent-products__item-img-box">
+                     <img class="recent-products__item-img" src="images/recent-products/1.jpg"
+                        alt="product image">
+                  </div>
+                  <div class="recent-products__item-box">
+                     <a class="recent-products__item-link" href="#">
+                        <h6 class="recent-products__item-title">Pendant lamp</h6>
+                     </a>
+                     <div class="star" data-rateyo-rating="4"></div>
+                     <span class="recent-products__item-price">23$</span>
+                  </div>
+               </div>
+               <div class="recent-products__item">
+                  <div class="recent-products__item-img-box">
+                     <img class="recent-products__item-img" src="images/recent-products/2.jpg"
+                        alt="product image">
+                  </div>
+                  <div class="recent-products__item-box">
+                     <a class="recent-products__item-link" href="#">
+                        <h6 class="recent-products__item-title">Pendant lamp</h6>
+                     </a>
+                     <div class="star" data-rateyo-rating="4"></div>
+                     <span class="recent-products__item-price">23$</span>
+                  </div>
+               </div>
+               <div class="recent-products__item">
+                  <div class="recent-products__item-img-box">
+                     <img class="recent-products__item-img" src="images/recent-products/3.jpg"
+                        alt="product image">
+                  </div>
+                  <div class="recent-products__item-box">
+                     <a class="recent-products__item-link" href="#">
+                        <h6 class="recent-products__item-title">Pendant lamp</h6>
+                     </a>
+                     <div class="star" data-rateyo-rating="4"></div>
+                     <span class="recent-products__item-price">23$</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="product-list__content">
+            {% include "app/module/_product-display/_product-display.njk" %}
+            {% include "app/module/_product-items/_product-items.njk" %}
+            {% include "app/module/_pagination/_pagination.njk" %}
+          </div>             
+      </div>
+   </div>
+</section>

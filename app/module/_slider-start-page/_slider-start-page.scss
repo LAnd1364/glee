@@ -1,7 +1,15 @@
 .slider {
   &__wrap {
-    background-image: url(../images/slider-bg.jpg);
-    background-position: center right;
+    background-color: #fcd7b6;
+    position: relative;
+  }
+  &__circle {
+    width: 640px;
+    height: 640px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10%;
+    top: 100px;
   }
   &__inner {
     height: 820px;
@@ -67,5 +75,96 @@
   }
   & .slick-active button::before {
     color: #243f4d;
+  }
+}
+
+@media (max-width: 1700px) {
+  .slider {
+    &__circle {
+      right: 5%;
+    }
+  }
+}
+@media (max-width: 1500px) {
+  .slider {
+    &__circle {
+      right: 2%;
+      top: 60px;
+    }
+    &__inner {
+      height: 760px;
+      padding: 175px 0 35px;
+    }
+    &__title {
+      font-size: 60px;
+      line-height: 1;
+    }
+  }
+}
+@media (max-width: 1320px) {
+  .slider {
+    &__circle {
+      display: none;
+    }
+    &__inner {
+      height: auto;
+      padding: 60px 0 25px;
+    }
+    &__item {
+      flex-direction: column;
+    }
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      max-width: 100%;
+    }
+    &__title {
+      font-size: 50px;
+    }
+    &__text {
+      margin-top: 20px;
+    }
+    &__link {
+      align-self: flex-end;
+      margin-bottom: 40px;
+      margin-left: 20px;
+    }
+    &__img {
+      margin: 20px auto 30px;
+    }
+  }
+}
+@media (max-width: 890px) {
+  .slider {
+    &__inner {
+      padding-top: 40px;
+    }
+    &__content {
+      flex-direction: column;
+    }
+    &__title {
+      font-size: 35px;
+    }
+    &__text {
+      margin: 10px 0 20px;
+    }
+    &__link {
+      align-self: flex-start;
+      padding: 18px 75px 18px 18px;
+      margin: 0 0 20px;
+    }
+    &__img {
+      max-width: 95%;
+    }
+  }
+}
+@media (max-width: 520px) {
+  .slider {
+    &__title {
+      font-size: 24px;
+    }
+    &__img {
+      margin: 10px auto 20px;
+    }
   }
 }

@@ -39,3 +39,9 @@
 .item-link + .item-link {
   margin-left: 15px;
 }
+
+@media (max-width: 890px) {
+  .item-links {
+    bottom: 80px;
+  }
+}

@@ -9,27 +9,11 @@
 </head>
 
 <body>
-{% include "app/module/_header/_header.njk" %}
+   {% include "app/module/_header/_header.njk" %}
 
    <main class="main">
 
-      <div class="top">
-         <div class="container-s">
-            <div class="top__inner">
-               <h2 class="top__title">Log in</h2>
-               <div class="breadcrumbs">
-                  <ul class="breadcrumbs__list">
-                     <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link" href="#">Home</a>
-                     </li>
-                     <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link" href="#">Log in</a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
+      {% include "app/module/_top/_top.njk" %}
 
       <section class="modal">
          <div class="container-s">

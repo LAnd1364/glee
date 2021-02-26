@@ -9,27 +9,11 @@
 </head>
 
 <body>
-{% include "app/module/_header/_header.njk" %}
+   {% include "app/module/_header/_header.njk" %}
 
    <main class="main">
 
-      <div class="top">
-         <div class="container-s">
-            <div class="top__inner">
-               <h2 class="top__title">About Us</h2>
-               <div class="breadcrumbs">
-                  <ul class="breadcrumbs__list">
-                     <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link" href="#">Home</a>
-                     </li>
-                     <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link" href="#">About Us</a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
+      {% include "app/module/_top/_top.njk" %}
 
       <section class="about">
          <div class="container-s">
@@ -67,7 +51,7 @@
                </div>
             </div>
          </div>
-         <div class="about-statistic">
+         {# <div class="about-statistic">
             <div class="container-s">
                <div class="about-statistic__inner">
                   <div class="about-statistic__item">
@@ -169,7 +153,7 @@
                      </li>
                   </ul>
                </div>
-            </div>
+            </div> #}
          </div>
       </section>
 
