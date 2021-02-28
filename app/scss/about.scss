@@ -262,6 +262,15 @@
   .about-company {
     padding: 90px 0;
   }
+  .about-statistic {
+    &__inner {
+      padding: 65px 0;
+    }
+  }
+  .about-team {
+    padding: 90px 0 0px;
+    margin-bottom: -10px;
+}
 }
 @media (max-width: 1180px) {
   .about-company {
@@ -289,14 +298,52 @@
       line-height: 36px;
     }
   }
+  .about-statistic {
+    &__inner {
+      padding: 45px 0 55px;
+    }
+    &__num {
+      margin: 18px 0 8px;
+    }
+  }
+  .about-team {
+    &__person-data {
+      max-width: 305px;
+      padding: 20px 18px 14px 22px;
+      margin-bottom: -20px;
+      transform: translateY(-40px);
+    }
+  }
+}
+@media (max-width: 1080px) {
+  .about-team {
+    &__info {
+      max-width: 295px;
+    }
+    &__people {
+      column-gap: 20px;
+    }
+  }
 }
 @media (max-width: 990px) {
   .about-company {
+    padding: 60px 0;
     &__img {
       display: none;
     }
+    &__box {
+      display: flex;
+    }
     &__content {
+      flex-direction: row;
+      flex-wrap: wrap;
       max-width: 100%;
+    }
+    &__pre-title {
+      padding-right: 30px;
+    }
+    &__age {
+      margin-right: 18px;
     }
     &__title {
       transform: translateY(0);
@@ -305,6 +352,185 @@
     &__text {
       margin-bottom: 30px;
     }
-
+    &__achiev {
+      width: 100%;
+      justify-content: center;
+      padding-top: 25px;
+      &::before {
+        content: '';
+        width: 100%;
+      }
+    }
+    &__achiev-item {
+      padding: 5px 22px 10px 87px;
+      &::before {
+      }
+    }
+    &__achiev-item--proj {
+      padding-left: 55px;
+      &::before {
+        top: 15px;
+      }
+    }
+    &__achiev-item--reven {
+      &::before {
+        top: 13px;
+      }
+    }
+    &__achiev-item--awards {
+      &::before {
+        top: 14px;
+      }
+    }
+  }
+  .about-team {
+    padding: 70px 0;
+    &__inner {
+      flex-direction: column;
+    }
+    &__info {
+      max-width: 100%;
+      margin: 0 0 20px 0;
+    }
+    &__title {
+      margin-bottom: 12px;
+    }
+    &__text {
+      margin-bottom: 30px;
+    }
+    &__people {
+      max-width: 100%;
+    }
+    &__person-img {
+      max-width: 100%;
+      object-position: top;
+    }
+  }
+}
+@media (max-width: 890px) {
+  .about__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .about-company {
+    padding: 50px 0;
+    &__age {
+      font-size: 115px;
+    }
+    &__title {
+      margin-bottom: 6px;
+    }
+    &__text {
+      line-height: 26px;
+      margin-bottom: 22px;
+    }
+    &__achiev {
+      padding-top: 18px;
+    }
+    &__achiev-num {
+      font-size: 32px;
+      line-height: 34px;
+    }
+  }
+  .about-statistic {
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 50%;
+    }
+    &__item:nth-child(-n+2) {
+      margin-bottom: 25px;
+    }
+    &__num {
+      margin: 12px 0 8px;
+    }
+  }
+}
+@media (max-width: 740px) {
+  .about__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .about-company {
+    padding: 25px 0;
+    &__box {
+      flex-direction: column;
+    }
+    &__age {
+      font-size: 110px;
+      margin-right: 12px;
+    }
+    &__pre-title {
+      height: 120px;
+      margin-bottom: 10px;
+    }
+    &__achiev-num {
+      font-size: 28px;
+      line-height: 30px;
+      margin-bottom: 2px;
+    }
+    &__text {
+      margin-bottom: 12px;
+  }
+    &__achiev-item--proj {
+      padding-left: 55px;
+      &::before {
+        top: 12px;
+      }
+    }
+    &__achiev-item--reven {
+      &::before {
+        top: 10px;
+      }
+    }
+    &__achiev-item--awards {
+      &::before {
+        top: 11px;
+      }
+    }
+  }
+  .about-team {
+    &__person-data {
+    max-width: 290px;
+    padding: 16px 15px 10px 18px;
+    }
+  }
+}
+@media (max-width: 660px) {
+  .about-team {
+    &__person-data {
+      max-width: 270px;
+      padding: 16px 8px 10px 10px;
+    }
+  }
+}
+@media (max-width: 590px) {
+  .about-team {
+    padding: 35px 0;
+    &__people {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__person-data {
+      max-width: 290px;
+      padding: 16px 15px 10px 18px;
+      }
+  }
+}
+@media (max-width: 520px) {
+  .about-company {
+    &__achiev {
+      display: none;
+    }
+  }
+}
+@media (max-width: 420px) {
+  .about-statistic {
+    &__inner {
+      padding: 35px 0;
+  }
+    &__item {
+      width: 100%;
+    }
   }
 }

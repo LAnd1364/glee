@@ -77,6 +77,13 @@ $('.product-det__more-btn').on('click', function(e) {
    $($(this).attr('href')).addClass('product-det__more-content--active');
 });
 
+// --------------------aside-slide--------------------
+$('.aside-title-box').on('click', function() {
+   $(this).next().slideToggle();
+   $(this).toggleClass('aside-title-box--active');
+ });
+
+// --------------------footer-slide--------------------
 $('.footer-top__item-title-slide').on('click', function() {
    $(this).next().slideToggle();
    $(this).toggleClass('footer-top__item-title-slide--active');

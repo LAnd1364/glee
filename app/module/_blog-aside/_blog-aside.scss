@@ -58,3 +58,32 @@
     }
   }
 }
+
+@media (max-width: 890px) {
+  .aside-title {
+    margin-bottom: 20px;
+    &-line {
+      position: relative;
+      &::after {
+        content: '';
+        width: 11pt;
+        height: 16pt;
+        background-image: url(../../images/icons/angle-down-btn.svg);
+        position: absolute;
+        left: 40px;
+        transition: all .5s;
+      }
+    }
+    &-box--active {
+      .aside-title-line::after {
+        transform: rotateX(180deg);
+        transform-origin: 0% 0%;
+      }
+    }
+  }
+  .aside {
+    &__items {
+      display: none;
+    }
+  }
+}
