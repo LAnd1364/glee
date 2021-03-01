@@ -1,0 +1,147 @@
+.lamps {
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding-top: 185px;
+  }
+  &__item {
+    display: flex;
+    height: 390px;
+    background-color: #feefe2;
+    padding: 90px 10px 85px 55%;
+    position: relative;
+  }
+  &__item-img {
+    position: absolute;
+    left: 16%;
+    bottom: 85px;
+  }
+  &__item-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    max-width: 332px;
+  }
+  &__inner-title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  &__inner-desc {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 15px;
+  }
+  &__inner-link {
+    @extend %btn-arrow;
+    color: #436372;
+    background-color: transparent;
+    border: 1px solid #b3b7b5;
+    border-radius: 5px;
+    padding: 24px 85px 24px 20px;
+    margin-top: auto;
+    &::after {
+      background-image: url(../images/icons/lamps__arrow-right.svg);
+    }
+    &:hover {
+      background-color: rgba($btn, .1);
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .lamps {
+    &__wrap {
+      padding-top: 170px;
+    }
+    &__item {
+      height: 360px;
+      padding: 75px 10px 70px 50%;
+    }
+    &__item-img {
+      left: 10%;
+      bottom: 70px;
+    }
+  }
+}
+@media (max-width: 1320px) {
+  .lamps {
+    &__wrap {
+      padding-top: 190px;
+    }
+    &__item {
+      height: 330px;
+      padding: 60px 10px 55px 47%;
+    }
+    &__item-img {
+      left: 5%;
+      bottom: 55px;
+    }
+  }
+}
+@media (max-width: 1180px) {
+  .lamps {
+    &__wrap {
+      grid-gap: 20px;
+      padding-top: 65px;
+    }
+    &__inner-title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    &__item {
+      height: 310px;
+      padding: 55px 10px 45px 37%;
+  }
+    &__item-img {
+      width: 135px;
+      left: 4%;
+      bottom: 40px;
+    }
+  }
+}
+@media (max-width: 990px) {
+  .lamps {
+    &__wrap {
+      grid-gap: 15px;
+    }
+    &__inner-title {
+      font-size: 22px;
+      line-height: 24px;
+    }
+    &__inner-desc {
+      line-height: 24px;
+    }
+    &__inner-link {
+      padding: 18px 75px 18px 18px;
+    }
+    &__item {
+      height: 205px;
+      padding: 25px 10px 15px;
+    }
+    &__item-img {
+      display: none;
+    }
+  }
+}
+@media (max-width: 660px) {
+  .lamps {
+    &__wrap {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+    }
+    &__item-inner {
+      max-width: 100%;
+    }
+    &__inner-title {
+      font-size: 20px;
+      line-height: 22px;
+    }
+    .lamps__item {
+      height: 190px;
+      padding: 20px 7px 15px;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+// @import '../../node_modules/ion-rangeslider/css/ion.rangeSlider.css';
+@import '../../node_modules/rateyo/src/jquery.rateyo';
+@import '../module/_product-display/_product-display';
+@import '../module/_filter/_filter';
+@import '../module/_rangeslider/_rangeslider';
+@import '../module/_product-items/_product-items';
+@import '../module/_pagination/_pagination';
+
+.product-list {
+  padding: 120px 0;
+  &__inner {
+    display: flex;
+  }
+  &__aside {
+    min-width: 270px;
+    margin-right: 30px;
+  }
+  &__content {
+    width: 100%;
+  }
+}
+
+.aside-title-box {
+  display: flex;
+  align-items: center;
+}
+.aside-title {
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0 15px 30px 0;
+  &-line {
+    width: 40px;
+    height: 3px;
+    background-color: $btn;
+    margin-bottom: 30px;
+  }
+}
+
+.price-filter {
+  .filter__form {
+    padding-top: 10px;
+  }
+  &__diapason {
+    display: flex;
+    justify-content: space-between;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 26px;
+    color: inherit;
+  }
+  &__from {
+    margin-right: auto;
+  }
+}
+
+
+
+.irs {
+  &-min,
+  &-max {
+    display: none;
+  }
+}
+.irs--flat {
+  & .irs-line {
+    top: 0;
+    height: 1px;
+    background-color: #c2d2db;
+    border-radius: 0;
+    box-shadow: 0 -1px 0 0 #dfe7ec, 0 1px 0 0 #dfe7ec;
+  }
+  & .irs-bar {
+    top: 1px;
+    height: 2px;
+    background-color: $btn;
+    box-shadow: 0 -1px 0 0 #bfd0d9, 0 1px 0 0 #d4dfe5;
+  }
+  & .irs-from,
+  & .irs-to {
+    width: 15px;
+    height: 15px;
+    font-size: 0;
+    background-color: $btn;
+    border-radius: 0;
+    top: -6px;
+    z-index: 1;
+    cursor: grab;
+    &::before {
+      display: none;
+    }
+  }
+  & .irs-handle {
+    display: none;
+  }
+}
+
+.recent-products {
+  &__item {
+    display: flex;
+    margin-bottom: 23px;
+  }
+  &__item-img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 71px;
+    height: 71px;
+    border: 3px solid #f2f2f2;
+    margin-right: 17px;
+  }
+  &__item-img {
+    max-width: 65px;
+    max-height: 65px;
+  }
+  &__item-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  &__item-link {
+    padding-bottom: 2px;
+  }
+}
+.jq-ry-container {
+  padding: 0;
+}
+

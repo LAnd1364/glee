@@ -38,10 +38,12 @@ $title: #191919;
 %btn-arrow {
   display: inline-block;
   width: fit-content;
+  height: fit-content;
   @extend %rubik-500;
   font-size: 15px;
   line-height: 12px;
   color: #fff;
+  white-space: nowrap;
   background-color: $btn;
   padding: 25px 100px 25px 25px;
   position: relative;
@@ -61,17 +63,9 @@ $title: #191919;
   @extend %dnsans-700;
   font-size: 36px;
   line-height: 44px;
+  text-align: center;
   color: $title;
   padding-top: 100px;
-}
-%flt {
-  @extend %dnsans-700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #8b8b8b;
-  background-color: transparent;
-  margin: 30px 15px 80px;
-  cursor: pointer;
 }
 %checkbox-hide {
   width: 0;

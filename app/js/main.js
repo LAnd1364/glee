@@ -1,8 +1,28 @@
 $(function() {
 
+   // --------------------menu__btn--------------------
+   $('.menu__btn, .menu__item-link').on('click', function(){
+      $('.menu__list').toggleClass('menu-list--active');
+      $('.menu__btn').toggleClass('menu__btn--active');
+      $('.user-nav__form').removeClass('user-nav__form--active');
+      $('.user-nav__input').removeClass('user-nav__input--active');
+      $('.header__inner').removeClass('header__inner--move');
+      $('.user-nav__links').removeClass('user-nav__links--move');
+      $('.menu__btn').removeClass('menu__btn--move');
+      $('.breadcrumbs__item').toggleClass('breadcrumbs__item--noact');
+      $('.articles__top-link').toggleClass('articles__top-link--noact');
+      $('.articles__item-img-link').toggleClass('articles__item-img-link--noact');
+   });
+   
    // --------------------userNav--------------------
    $('.user-nav__search-btn').on('click', function() {
-     $('.user-nav__form').toggleClass('user-nav__form--active');
+      $('.user-nav__form').toggleClass('user-nav__form--active');
+      $('.user-nav__input').toggleClass('user-nav__input--active');
+      $('.header__inner').toggleClass('header__inner--move');
+      $('.user-nav__links').toggleClass('user-nav__links--move');
+      $('.menu__btn').toggleClass('menu__btn--move');
+      $('.menu__btn').removeClass('menu__btn--active');
+      $('.menu__list').removeClass('menu-list--active');
    });
 
 // --------------------Pagination--------------------
@@ -33,18 +53,18 @@ $('.pagination__prev-btn').on('click', function() {
 });
 
 // --------------------display-btn--------------------
-$('.product-list__display-btn').on('click', function() {
-   $('.product-list__display-btn').removeClass('product-list__display-btn--active');
-   $(this).addClass('product-list__display-btn--active');
+$('.product-display__btn').on('click', function() {
+   $('.product-display__btn').removeClass('product-display__btn--active');
+   $(this).addClass('product-display__btn--active');
 });
 
-$('.product-list__display-grid').on('click', function() {
-   $('.product-list__items').removeClass('product-list__items--list');
+$('.product-display__grid').on('click', function() {
+   $('.product-items').removeClass('product-items--list');
    $('.pagination').removeClass('pagination--list');
 });
 
-$('.product-list__display-list').on('click', function() {
-   $('.product-list__items').addClass('product-list__items--list');
+$('.product-display__list').on('click', function() {
+   $('.product-items').addClass('product-items--list');
    $('.pagination').addClass('pagination--list');
 });
 
@@ -56,6 +76,18 @@ $('.product-det__more-btn').on('click', function(e) {
    $('.product-det__more-content').removeClass('product-det__more-content--active');
    $($(this).attr('href')).addClass('product-det__more-content--active');
 });
+
+// --------------------aside-slide--------------------
+$('.aside-title-box').on('click', function() {
+   $(this).next().slideToggle();
+   $(this).toggleClass('aside-title-box--active');
+ });
+
+// --------------------footer-slide--------------------
+$('.footer-top__item-title-slide').on('click', function() {
+   $(this).next().slideToggle();
+   $(this).toggleClass('footer-top__item-title-slide--active');
+ });
 
 // --------------------------------------------------------------
 // $('.contact__item--email').hover(function() {
@@ -80,7 +112,7 @@ $('.product-det__slider-s').slick({
  });
 
 // --------------------Sliick-------------------
-$('.related-prod__slider').slick({
+$('.related-prod__slider-wrap .product-items').slick({
    infinite: false,
    slidesToShow: 4,
    slidesToScroll: 1,
@@ -134,12 +166,12 @@ $('.product-det__cart-input').styler({});
 
 
 // --------------------MixItUp-------------------
-var popular__items = document.querySelector('.popular__items');
+var product_items = document.querySelector('.product-items');
 var newdesign__items = document.querySelector('.new-design__items');
 
-var mixer1 = mixitup(popular__items, {
+var mixer1 = mixitup(product_items, {
    selectors: {
-      control: '.popular__filt-btn'
+      control: '.product-filt__btn'
    }
 });
 var mixer2 = mixitup(newdesign__items, {

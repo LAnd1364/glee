@@ -1,0 +1,11 @@
+@import '../module/_product-items/_product-items';
+
+.products {
+  &__title {
+    @extend %section-title;
+  }
+}
+.product-item__wrap:nth-child(n+9) {
+  display: none;
+}
+
