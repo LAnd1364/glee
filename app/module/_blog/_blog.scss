@@ -10,6 +10,9 @@
     max-width: 830px;
     margin-right: 70px;
   }
+  &__item-img-link {
+    display: block;
+  }
   &__item-img {
     width: 830px;
     height: 500px;
@@ -35,7 +38,7 @@
     background-color: $btn;
     padding-left: 20px;
     position: absolute;
-    transform: translateY(-180px);
+    transform: translateY(-110px);
   }
   &__item-date {
     padding-left: 20px;
@@ -82,7 +85,7 @@
     @extend %rubik-400;
     font-size: 16px;
     line-height: 30px;
-    
+    text-align: justify
   }
   &__item-link {
     @extend %btn-arrow;
@@ -115,6 +118,10 @@
       width: 255px;
       height: 60px;
       padding-left: 15px;
+      transform: translateY(-100px);
+    }
+    &__item-link {
+      margin: 25px 0 45px;
     }
   }
 }
@@ -137,6 +144,7 @@
       width: 250px;
       height: 54px;
       padding-left: 12px;
+      transform: translateY(-94px);
     }
   }
 }
@@ -150,6 +158,24 @@
       margin-right: 0;
       margin-bottom: 30px;
     }
+    &__item-title {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 10px;
+    }
+    &__item-text {
+      line-height: 24px;
+    }
+    .blog__item-img {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &__item-info {
+      transform: translateY(-84px);
+    }
+    &__item-link {
+      padding: 20px 90px 20px 15px;
+    }
   }
 }
 @media (max-width: 740px) {
@@ -162,6 +188,23 @@
     }
     &__item-info {
       height: 50px;
+      transform: translateY(-80px);
+    }
+  }
+}
+@media (max-width: 660px) {
+  .blog {
+    &__item-title {
+      font-size: 28px;
+      line-height: 30px;
+      margin-bottom: 8px;
+    }
+    &__item-text {
+      font-size: 15px;
+      line-height: 22px;
+    }
+    &__item-link {
+      margin: 15px 0 30px;
     }
   }
 }
@@ -172,6 +215,13 @@
     }
     &__item-img {
       height: 270px;
+    }
+  }
+}
+@media (max-width: 420px) {
+  .blog {
+    &__item-title {
+      font-size: 26px;
     }
   }
 }

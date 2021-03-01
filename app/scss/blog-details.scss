@@ -303,9 +303,6 @@
         margin-top: 15px;
       }
     }
-    .blog__item-img {
-      width: 100%;
-    }
   }
 }
 @media (max-width: 740px) {
@@ -409,7 +406,6 @@
 @media (max-width: 420px) {
   .blog-one {
     &__content {
-      line-height: 22px;
       h3 {
         font-size: 26px;
       }

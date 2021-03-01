@@ -63,3 +63,26 @@
     }
   }
 }
+
+@media (max-width: 420px) {
+  .pagination {
+    transform: translateX(-75px);
+    &--transf {
+      transform: translateX(0);
+    }
+    &__item-btn,
+    &__prev-btn,
+    &__next-btn {
+      height: 40px;
+      padding: 0 15px;
+      margin-right: 10px;
+    }
+    &__next-btn {
+      margin-right: 0;
+    }
+    &__item-btn {
+      width: 40px;
+    }
+    // transform: translateX(-90px);
+  }
+}

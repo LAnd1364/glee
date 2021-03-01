@@ -102,3 +102,49 @@
     }
   }
 }
+
+@media (max-width: 1500px) {
+  .modal {
+    &__form {
+      margin: 90px auto;
+    }
+  }
+}
+@media (max-width: 1180px) {
+  .modal {
+    &__form {
+      margin: 70px auto;
+    }
+  }
+}
+@media (max-width: 660px) {
+  .modal {
+    &__form {
+      margin: 50px auto;
+    }
+    &__input {
+      height: 40px;
+      margin: 5px 0 16px;
+    }
+    &__btn {
+      height: 50px;
+      margin: 5px 0 15px;
+    }
+    &__checkbox-lostpass {
+      margin-bottom: 15px;
+    }
+    &__go-register {
+      padding: 15px 0 8px;
+    }
+    .modal__register-link {
+      height: 50px;
+    }
+  }
+}
+@media (max-width: 520px) {
+  .modal {
+    &__form {
+      margin: 30px auto;
+    }
+  }
+}

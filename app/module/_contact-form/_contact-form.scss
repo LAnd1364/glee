@@ -87,12 +87,13 @@
 .contact {
   .contact-form {
     max-width: 620px;
+    width: 100%;
     text-align: left;
     margin-right: 50px;
-    &-input-wrap {
+    &__input-wrap {
       margin-bottom: 25px;
     }
-    &__input-wrap + .blog-one__form-input-wrap {
+    &__input-wrap + .contact-form__input-wrap {
       margin-left: 20px;
     }
     &__input-wrap--name::before {
@@ -126,14 +127,50 @@
   }
 }
 
-@media (max-width: 890px) {
-  .contact-form {
-    &__input-wrap,
-    &__input {
-      max-width: 435px;
+@media (max-width: 1080px) {
+  .contact {
+    .contact-form {
+      max-width: 470px;
+      margin-right: 20px;
+      &__inputs {
+        display: block;
+      }
+      &__input-wrap {
+        margin-bottom: 12px;
+      }
+      &__input-wrap,
+      &__input {
+        max-width: 540px;
+        &__input-wrap,
+        &__input-wrap + .contact-form__input-wrap {
+          margin-left: 20px;
+        }
+      }
+      &__input-wrap + .contact-form__input-wrap {
+        margin-left: 0;
+      }
+      &__textarea {
+        height: 200px;
+      }
     }
-    &__input-wrap + .contact-form__input-wrap {
-      margin-left: 20px;
+  }
+}
+@media (max-width: 890px) {
+  .contact {
+    .contact-form {
+      max-width: 100%;
+      margin-bottom: 20px;
+      &__input-wrap,
+      &__input {
+        max-width: 100%;
+      }
+      &__input,
+      &__textarea {
+        padding-left: 12px;
+      }
+      &__textarea {
+        margin-bottom: 15px;
+      }
     }
   }
 }
