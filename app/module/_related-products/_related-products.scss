@@ -44,3 +44,16 @@
     border-color: #edf1f4;
   }
 }
+
+@media (max-width: 1180px) {
+  .related-prod {
+    padding: 0;
+    &__title {
+      margin-bottom: 5px;
+    }
+    .slick-prev,
+    .slick-next {
+      top: -40px;
+    }
+  }
+}

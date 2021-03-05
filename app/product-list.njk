@@ -21,6 +21,13 @@
 
    {% include "app/module/_footer/_footer.njk" %}
 
+   <script>
+      var mybutton = document.getElementsByClassName("filters");
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+   </script>
    <script src="js/main.min.js"></script>
 </body>
 
