@@ -1,24 +1,9 @@
 @import '../module/_search-form/_search-form';
+@import '../module/_aside-title-box/_aside-title-box';
 @import '../module/_filter/_filter';
 
 .blog__aside {
   max-width: 270px;
-}
-.aside-title-box {
-  display: flex;
-  align-items: center;
-}
-.aside-title {
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  margin: 0 15px 30px 0;
-  &-line {
-    width: 40px;
-    height: 3px;
-    background-color: $btn;
-    margin-bottom: 30px;
-  }
 }
 .posts {
   &__item {
@@ -60,25 +45,14 @@
 }
 
 @media (max-width: 890px) {
+  .aside-title-box {
+    pointer-events: painted;
+    cursor: pointer;
+  }
   .aside-title {
     margin-bottom: 20px;
-    &-line {
-      position: relative;
-      &::after {
-        content: '';
-        width: 11pt;
-        height: 16pt;
-        background-image: url(../../images/icons/angle-down-btn.svg);
-        position: absolute;
-        left: 40px;
-        transition: all .5s;
-      }
-    }
-    &-box--active {
-      .aside-title-line::after {
-        transform: rotateX(180deg);
-        transform-origin: 0% 0%;
-      }
+    &-line::after {
+      display: block;
     }
   }
   .aside {

@@ -12,6 +12,8 @@ $(function() {
       $('.breadcrumbs__item').toggleClass('breadcrumbs__item--noact');
       $('.articles__top-link').toggleClass('articles__top-link--noact');
       $('.articles__item-img-link').toggleClass('articles__item-img-link--noact');
+      $('.product-list__aside').toggleClass('product-list__aside--noact');
+      $('.filters').toggleClass('filters--noact');
    });
    
    // --------------------userNav--------------------
@@ -24,61 +26,68 @@ $(function() {
       $('.menu__btn').removeClass('menu__btn--active');
       $('.menu__list').removeClass('menu-list--active');
    });
+   
+   // --------------------display-btn--------------------
+   $('.product-display__btn').on('click', function() {
+      $('.product-display__btn').removeClass('product-display__btn--active');
+      $(this).addClass('product-display__btn--active');
+   });
+   
+   $('.product-display__grid').on('click', function() {
+      $('.product-items').removeClass('product-items--list');
+      $('.product-list__aside').removeClass('product-list__aside--list');
+      $('.pagination').removeClass('pagination--list');
+   });
+   
+   $('.product-display__list').on('click', function() {
+      $('.product-items').addClass('product-items--list');
+      $('.product-list__aside').addClass('product-list__aside--list');
+      $('.pagination').addClass('pagination--list');
+   });
 
-// --------------------Pagination--------------------
-$('.pagination__item-btn').on('click', function() {
-   $('.pagination__item-btn').removeClass('pagination__item-btn--active');
-   $(this).addClass('pagination__item-btn--active');
-   $('.pagination__prev-btn').addClass('pagination__prev-btn--active');
-   $('.pagination__next-btn').removeClass('pagination__next-btn--hide');
-   $('.pagination').addClass('pagination--transf');
-});
+   // --------------------product-det__more-btn--------------------
+   $('.product-det__more-btn').on('click', function(e) {
+      e.preventDefault()
+      $('.product-det__more-btn').removeClass('product-det__more-btn--active');
+      $(this).addClass('product-det__more-btn--active');
+      $('.product-det__more-content').removeClass('product-det__more-content--active');
+      $($(this).attr('href')).addClass('product-det__more-content--active');
+   });
+      
+   // --------------------filters--------------------
+   $('.filters').on('click', function() {
+      $('.product-list__aside').toggleClass('product-list__aside--active');
+   });
+ 
+   // --------------------Pagination--------------------
+   $('.pagination__item-btn').on('click', function() {
+      $('.pagination__item-btn').removeClass('pagination__item-btn--active');
+      $(this).addClass('pagination__item-btn--active');
+      $('.pagination__prev-btn').addClass('pagination__prev-btn--active');
+      $('.pagination__next-btn').removeClass('pagination__next-btn--hide');
+      $('.pagination').addClass('pagination--transf');
+   });
+   
+   $('.pagination__item-btn:first').on('click', function() {
+      $('.pagination__prev-btn').removeClass('pagination__prev-btn--active');
+      $('.pagination').removeClass('pagination--transf');
+   });
+   
+   $('.pagination__item-btn:last').on('click', function() {
+      $('.pagination__next-btn').addClass('pagination__next-btn--hide');
+   });
+   
+   $('.pagination__next-btn').on('click', function() {
+      $('.pagination__prev-btn').addClass('pagination__prev-btn--active');
+      $('.pagination').addClass('pagination--transf');
+   });
+   
+   $('.pagination__prev-btn').on('click', function() {
+      $('.pagination__next-btn').removeClass('pagination__next-btn--hide');
+   });
 
-$('.pagination__item-btn:first').on('click', function() {
-   $('.pagination__prev-btn').removeClass('pagination__prev-btn--active');
-   $('.pagination').removeClass('pagination--transf');
-});
-
-$('.pagination__item-btn:last').on('click', function() {
-   $('.pagination__next-btn').addClass('pagination__next-btn--hide');
-});
-
-$('.pagination__next-btn').on('click', function() {
-   $('.pagination__prev-btn').addClass('pagination__prev-btn--active');
-   $('.pagination').addClass('pagination--transf');
-});
-
-$('.pagination__prev-btn').on('click', function() {
-   $('.pagination__next-btn').removeClass('pagination__next-btn--hide');
-});
-
-// --------------------display-btn--------------------
-$('.product-display__btn').on('click', function() {
-   $('.product-display__btn').removeClass('product-display__btn--active');
-   $(this).addClass('product-display__btn--active');
-});
-
-$('.product-display__grid').on('click', function() {
-   $('.product-items').removeClass('product-items--list');
-   $('.pagination').removeClass('pagination--list');
-});
-
-$('.product-display__list').on('click', function() {
-   $('.product-items').addClass('product-items--list');
-   $('.pagination').addClass('pagination--list');
-});
-
-// --------------------product-det__more-btn--------------------
-$('.product-det__more-btn').on('click', function(e) {
-   e.preventDefault()
-   $('.product-det__more-btn').removeClass('product-det__more-btn--active');
-   $(this).addClass('product-det__more-btn--active');
-   $('.product-det__more-content').removeClass('product-det__more-content--active');
-   $($(this).attr('href')).addClass('product-det__more-content--active');
-});
-
-// --------------------aside-slide--------------------
-$('.aside-title-box').on('click', function() {
+   // --------------------aside-slide--------------------
+   $('.aside-title-box').on('click', function() {
    $(this).next().slideToggle();
    $(this).toggleClass('aside-title-box--active');
  });
@@ -102,13 +111,29 @@ $('.product-det__slider-s').slick({
    slidesToShow: 3,
    slidesToScroll: 1,
    focusOnSelect: true,
-   asNavFor: '.product-det__slider-l'
+   asNavFor: '.product-det__slider-l',
+   responsive: [
+      {
+        breakpoint: 771,
+        settings: {
+            vertical: false,
+        }
+      },
+    ]
  });
  $('.product-det__slider-l').slick({
    fade: true,
    arrows: false,
    asNavFor: '.product-det__slider-s',
    centerMode: true,
+   responsive: [
+      {
+        breakpoint: 661,
+        settings: {
+            dots: true,
+        }
+      },
+    ]
  });
 
 // --------------------Sliick-------------------
