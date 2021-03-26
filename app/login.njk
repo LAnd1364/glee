@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Glee Login</title>
+   <link rel="stylesheet" href="css/login.min.css">
+</head>
+
+<body>
+   {% include "app/module/_header/_header.njk" %}
+
+   <main class="main">
+
+      {% include "app/module/_top/_top.njk" %}
+
+      <section class="modal">
+         <div class="container-s">
+            <form class="modal__form" action="#">
+               <label class="modal__label">
+                  Username or email address *
+                  <input class="modal__input" type="text">
+               </label>
+               <label class="modal__label">
+                  Password *
+                  <input class="modal__input" type="password">
+               </label>
+               <button class="modal__btn" type="submit">Login</button>
+               <div class="modal__checkbox-lostpass">
+                  <label class="modal__label">
+                     <input class="modal__checkbox" type="checkbox">
+                     <span class="modal__checkbox-text">Remember me</span>
+                  </label>
+                  <a class="modal__lostpass-link" href="#">Lost your password?</a>
+               </div>
+               <p class="modal__go-register">Not registered? No problem</p>
+               <a class="modal__register-link" href="#">Create an account</a>
+            </form>
+         </div>
+      </section>
+
+{% include "app/module/_partners/_partners.njk" %}
+
+   </main>
+
+{% include "app/module/_footer/_footer.njk" %}
+
+   <script src="js/main.min.js"></script>
+</body>
+
+</html>

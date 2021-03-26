@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="106" height="12" viewBox="0 0 106 12">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 15px;
+        fill: #fff;
+        text-anchor: middle;
+        font-family: Rubik;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <text data-name="Add to cart" class="cls-1" x="53.378" y="11.421"><tspan x="53.378">Add to cart</tspan></text>
+</svg>

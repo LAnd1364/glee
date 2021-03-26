@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Glee</title>
+   <link rel="stylesheet" href="css/index.min.css">
+</head>
+
+<body>
+
+   {% include "app/module/_header/_header.njk" %}
+
+   <main class="main">
+
+      {% include "app/module/_slider-start-page/_slider-start-page.njk" %}
+
+      {% include "app/module/_services/_services.njk" %}
+
+      {% include "app/module/_products/_products.njk" %}
+
+      {% include "app/module/_lamps/_lamps.njk" %}
+
+      {% include "app/module/_new-design/_new-design.njk" %}
+
+      {% include "app/module/_video/_video.njk" %}
+
+      {% include "app/module/_articles/_articles.njk" %}
+
+      {% include "app/module/_partners/_partners.njk" %}
+
+   </main>
+
+   {% include "app/module/_footer/_footer.njk" %}
+
+   <script src="js/main.min.js"></script>
+</body>
+
+</html>

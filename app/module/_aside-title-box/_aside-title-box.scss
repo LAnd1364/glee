@@ -1,0 +1,36 @@
+.aside-title-box {
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+.aside-title {
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0 15px 30px 0;
+  &-line {
+    width: 40px;
+    height: 3px;
+    background-color: $btn;
+    margin-bottom: 30px;
+    position: relative;
+    &::after {
+      content: '';
+      display: none;
+      width: 11pt;
+      height: 16pt;
+      background-image: url(../../images/icons/angle-down-btn.svg);
+      position: absolute;
+      left: 40px;
+      opacity: 0;
+      transition: all .5s;
+    }
+  }
+  &-box--active {
+    .aside-title-line::after {
+      transform: rotateX(180deg);
+      transform-origin: 0% 0%;
+      opacity: 1;
+    }
+  }
+}

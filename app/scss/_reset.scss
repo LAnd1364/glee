@@ -6,9 +6,9 @@ html {
 *::after {
    box-sizing: inherit;
 }
-body {
-   min-height: 100vh;
-}
+// body {
+//    min-height: 100vh;
+// }
 body,
 h1,
 h2,
@@ -43,8 +43,19 @@ button,
 textarea,
 select {
    font: inherit;
+   resize: none;
 }
 a {
-   font: inherit;
+   color: inherit;
    text-decoration: none;
+}
+input,
+button {
+   background-color: transparent;
+   border: none;
+   padding: 0;
+   outline-color: rgba(#191919, .35);
+}
+button {
+   cursor: pointer;
 }

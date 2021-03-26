@@ -1,0 +1,227 @@
+@import '../module/_blog-aside/_blog-aside';
+@import '../module/_pagination/_pagination';
+
+.blog {
+  &__inner {
+    display: flex;
+    padding: 120px 0;
+  }
+  &__content {
+    max-width: 830px;
+    margin-right: 70px;
+  }
+  &__item-img-link {
+    display: block;
+  }
+  &__item-img {
+    width: 830px;
+    height: 500px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    opacity: 1;
+    transition: all .3s;
+    position: relative;
+    &:hover {
+      opacity: .9;
+    }
+  }
+  &__item-info {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    height: 70px;
+    @extend %rubik-400;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $btn;
+    padding-left: 20px;
+    position: absolute;
+    transform: translateY(-110px);
+  }
+  &__item-date {
+    padding-left: 20px;
+    position: relative;
+  }
+  &__item-author {
+    border-bottom: 1px solid transparent;
+    padding-left: 20px;
+    margin-left: 20px;
+    position: relative;
+    transition: all .3s;
+    &:hover {
+      border-bottom: 1px solid #fff;
+    }
+  }
+  &__item-date::before,
+  &__item-author::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 11px;
+    height: 13px;
+    background-image: url(../images/icons/calendar-white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__item-author::before {
+    background-image: url(../images/icons/user-white.svg);
+  }
+  &__item-title {
+    display: inline-block;
+    @extend %rubik-400;
+    font-size: 36px;
+    line-height: 40px;
+    color: #333;
+    border-bottom: 1px solid transparent;
+    margin-bottom: 30px;
+    transition: all .3s;
+    &:hover {
+      border-bottom: 1px solid #333;
+    }
+  }
+  &__item-text {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify
+  }
+  &__item-link {
+    @extend %btn-arrow;
+    color: $btn;
+    background-color: #fff;
+    border: 1px solid $btn;
+    margin: 43px 0 50px;
+    &:hover {
+      background-color: rgba($btn, .1);
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .blog {
+    &__inner {
+      padding: 90px 0;
+    }
+    &__content {
+      margin-right: 55px;
+    }
+  }
+}
+@media (max-width: 1180px) {
+  .blog {
+    &__item-img {
+      height: 420px;
+    }
+    &__item-info {
+      width: 255px;
+      height: 60px;
+      padding-left: 15px;
+      transform: translateY(-100px);
+    }
+    &__item-link {
+      margin: 25px 0 45px;
+    }
+  }
+}
+@media (max-width: 1080px) {
+  .blog {
+    &__inner {
+      padding: 70px 0;
+    }
+    &__content {
+      margin-right: 40px;
+    }
+  }
+}
+@media (max-width: 990px) {
+  .blog {
+    &__item-img {
+      height: 370px;
+    }
+    &__item-info {
+      width: 250px;
+      height: 54px;
+      padding-left: 12px;
+      transform: translateY(-94px);
+    }
+  }
+}
+@media (max-width: 890px) {
+  .blog {
+    &__inner {
+      display: block;
+    }
+    &__content {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    &__item-title {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 10px;
+    }
+    &__item-text {
+      line-height: 24px;
+    }
+    .blog__item-img {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &__item-info {
+      transform: translateY(-84px);
+    }
+    &__item-link {
+      padding: 20px 90px 20px 15px;
+    }
+  }
+}
+@media (max-width: 740px) {
+  .blog {
+    &__inner {
+      padding: 50px 0;
+    }
+    &__item-img {
+      height: 335px;
+    }
+    &__item-info {
+      height: 50px;
+      transform: translateY(-80px);
+    }
+  }
+}
+@media (max-width: 660px) {
+  .blog {
+    &__item-title {
+      font-size: 28px;
+      line-height: 30px;
+      margin-bottom: 8px;
+    }
+    &__item-text {
+      font-size: 15px;
+      line-height: 22px;
+    }
+    &__item-link {
+      margin: 15px 0 30px;
+    }
+  }
+}
+@media (max-width: 570px) {
+  .blog {
+    &__inner {
+      padding: 25px 0;
+    }
+    &__item-img {
+      height: 270px;
+    }
+  }
+}
+@media (max-width: 420px) {
+  .blog {
+    &__item-title {
+      font-size: 26px;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+$body: #243f4d;
+$btn: #a3bbc8;
+$title: #191919;
+
+%dnsans-400 {
+  font-family: 'DMSans-Regular', sans-serif;
+  font-weight: 400;
+}
+%dnsans-500 {
+  font-family: 'DMSans-Medium', sans-serif;
+  font-weight: 500;
+}
+%dnsans-700 {
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+}
+%rubik-300 {
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
+%rubik-400 {
+  font-family: 'Rubik-Regular', sans-serif;
+  font-weight: 400;
+}
+%rubik-500 {
+  font-family: 'Rubik-Medium', sans-serif;
+  font-weight: 500;
+}
+%rubik-700 {
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
+}
+%poppins-700 {
+  font-family: 'Poppins-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%btn-arrow {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  @extend %rubik-500;
+  font-size: 15px;
+  line-height: 12px;
+  color: #fff;
+  white-space: nowrap;
+  background-color: $btn;
+  padding: 25px 100px 25px 25px;
+  position: relative;
+  transition: all .3s;
+  &::after {
+    content: '';
+    background-image: url(../images/icons/arrow-right.svg);
+    width: 22px;
+    height: 9px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+  }
+}
+%section-title {
+  @extend %dnsans-700;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  color: $title;
+  padding-top: 100px;
+}
+%checkbox-hide {
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+
+
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

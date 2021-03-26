@@ -1,10 +1,14 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
+.star-l {
+  display: block;
+  margin-bottom: 30px;
+}
 
 
 
-
-@import 'media';
+  @import 'media';
