@@ -7,7 +7,7 @@ const uglify         = require('gulp-uglify');
 const imagemin       = require('gulp-imagemin');
 const nunjucksRender = require('gulp-nunjucks-render');
 const del            = require('del');
-const rename = require('gulp-rename');
+const rename         = require('gulp-rename');
 const browserSync    = require('browser-sync').create();
 
 
@@ -68,7 +68,7 @@ function images() {
           ]
       })
     ]))
-   .pipe(dest('dist/images'))
+   .pipe(dest('docs/images'))
 }
 function nunjucks() {
    return src('app/*.njk')
@@ -83,7 +83,7 @@ function build() {
       'app/css/style.min.css',
       'app/js/main.min.js'       
    ], {base: 'app'})
-   .pipe(dest('dist'))
+   .pipe(dest('docs'))
 }
 
 function cleanDist() {
