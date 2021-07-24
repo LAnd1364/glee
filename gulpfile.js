@@ -24,6 +24,15 @@ function styles() {
    // return src('app/scss/style.scss')
    return src('app/scss/*.scss')
    .pipe(scss({outputStyle: 'compressed'}))
+   //------------- Mew Start -----------------------
+   .pipe(concat('style.min.css'))
+   .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 versions'],
+      grid: true
+   }))
+   .pipe(dest('app/css'))
+   .pipe(browserSync.stream())
+   //------------- Mew End -----------------------
    
    // .pipe(concat('style.min.css'))
 
