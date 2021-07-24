@@ -120,7 +120,7 @@ $('.product-det__slider-s').slick({
         }
       },
     ]
- });
+});
  $('.product-det__slider-l').slick({
    fade: true,
    arrows: false,
